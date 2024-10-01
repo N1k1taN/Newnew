@@ -6,7 +6,6 @@ html{
       padding: 0;
       -webkit-box-sizing: border-box;
               box-sizing: border-box;
-              font-family: "Varela", sans-serif;
               outline: none;
   }
   @font-face {
@@ -228,7 +227,7 @@ height: 27px;
       flex-direction: column;
       align-content: space-around;
   align-items: center;
-  border-bottom: 2px solid rgba(105, 128, 166, 1);
+  border-bottom: 2px solid #4b5320;
   scroll-margin-top: 50px; /* Задайте смещение, например, высоту фиксированного меню */
   }
   .consulting>p:nth-child(2){
