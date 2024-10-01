@@ -43,7 +43,7 @@ const Accordions = () => {
         </AccordionTrigger>
         <AccordionContent>
           <h2>- За сімейними обставинами.</h2>
-          <h2>- За станом здоровʼя.</h2>
+          <h2>- За станом здоров&#39;я.</h2>
           <h2>- За необхідністю здійснення догляду за своїми батьками чи дружиною.</h2>
         </AccordionContent>
       </Accordion.Item>
@@ -59,9 +59,9 @@ const Accordions = () => {
         </AccordionTrigger>
         <AccordionContent>
           <div className="AccordionContentText">
-            <h2>- Призначення ВЛК у звʼязку з погіршенням стану здоровʼя.</h2>
-            <h2>- Оскарження ВЛК у звʼязку з не вірним висновком про ступень здоров’я до військової служби.</h2>
-            <h2>- Оскарження ВЛК у звʼязку з не вірним причинним звʼязком травми, захворювання.</h2>
+            <h2>- Призначення ВЛК у зв&#39;язку з погіршенням стану здоровʼя.</h2>
+            <h2>- Оскарження ВЛК у зв&#39;язку з не вірним висновком про ступень здоров’я до військової служби.</h2>
+            <h2>- Оскарження ВЛК у зв&#39;язку з не вірним причинним зв&#39;язком травми, захворювання.</h2>
           </div>
         </AccordionContent>
       </Accordion.Item>
@@ -89,16 +89,16 @@ const Accordions = () => {
             onClick={() => handleLinkClick('/groshovezabez')}
             style={{ cursor: 'pointer' }}
           >
-            ПРИЗНАЧЕННЯ ВИПЛАТИ ВІЙСЬКОВОСЛУЖБОВЦЯМ ТА ЇХ СІМ'ЯМ
+            ПРИЗНАЧЕННЯ ВИПЛАТИ ВІЙСЬКОВОСЛУЖБОВЦЯМ ТА ЇХ СІМ&#39;ЯМ
           </div>
         </AccordionTrigger>
         <AccordionContent>
           <div className="AccordionContentText">
             <h2>- Призначення виплати додаткової винагороди за поранення.</h2>
             <h2>- Призначення бойових виплат.</h2>
-            <h2>- Призначення одноразової грошової допомоги у звʼязку з отриманням групи інвалідності.</h2>
-            <h2>- Призначення одноразової грошової допомоги у звʼязку із загибеллю військовослужбовця.</h2>
-            <h2>- Призначення виплати сім’ям військовослужбовців, які перебувають у полоні або зниклі безвісти.</h2>
+            <h2>- Призначення одноразової грошової допомоги у зв&#39;язку з отриманням групи інвалідності.</h2>
+            <h2>- Призначення одноразової грошової допомоги у зв&#39;язку із загибеллю військовослужбовця.</h2>
+            <h2>- Призначення виплати сім&#39;ям військовослужбовців, які перебувають у полоні або зниклі безвісти.</h2>
           </div>
         </AccordionContent>
       </Accordion.Item>
@@ -182,6 +182,7 @@ const AccordionTrigger = React.forwardRef(({ children, className, ...props }, fo
     </Accordion.Trigger>
   </Accordion.Header>
 ));
+AccordionTrigger.displayName = 'AccordionTrigger';
 
 const AccordionContent = React.forwardRef(({ children, className, ...props }, forwardedRef) => (
   <Accordion.Content
@@ -192,5 +193,6 @@ const AccordionContent = React.forwardRef(({ children, className, ...props }, fo
     <div className="AccordionContentText">{children}</div>
   </Accordion.Content>
 ));
+AccordionContent.displayName = 'AccordionContent';
 
 export default Accordions;
