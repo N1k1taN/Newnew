@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import 'swiper/css/zoom';
 import Accordions from "../components/accordion"
 import '../styles/App.css';
 import OpenMenuButton from "../components/callpage"
@@ -63,23 +64,33 @@ function Homepage() {
   <div className="Comments" id="vidguk">
     <h2>ВІДГУКИ</h2>
     <Swiper 
-            modules={[Navigation, Pagination,Zoom]}
-            centeredSlides={true} 
-            spaceBetween={50}
-            slidesPerView={1}
-            initialSlide={2}
-            pagination={{ clickable: true }}
-            navigation={{ clickable:true }}
-            allowTouchMove ={true}
-            zoom={true}
-            loop={true}
-            breakpoints= {{
-              // Когда ширина экрана меньше или равна 768px
-              1100: {
-                Pagination:false,
-                allowTouchMove: false,
-                navigation: false,
-                slidesPerView: 3,}}}
+      modules={[Navigation, Pagination, Zoom]}
+      centeredSlides={true}
+      spaceBetween={50}
+      slidesPerView={1}
+      initialSlide={2}
+      pagination={{ clickable: true }}
+      navigation={{
+        nextEl: '.swiper-button-next',  // Явно указываем классы для кнопок навигации
+        prevEl: '.swiper-button-prev'
+      }}
+      allowTouchMove={true}
+      zoom={true}
+      loop={true}
+      breakpoints={{
+        1100: {
+          slidesPerView: 3,
+          pagination: false,
+          navigation: false,
+          allowTouchMove: false,
+        },
+        0: {
+          slidesPerView: 1,
+          pagination: true,
+          navigation: true,
+          allowTouchMove: true,
+        }
+      }}
       >
         <SwiperSlide style={{ margin: 0 }}><div className="swiper-zoom-container">
             <img src="/icons/vidguk/photo_2024-09-29_16-33-13.jpg" className="imgcont"
@@ -144,44 +155,64 @@ function Homepage() {
               <section id="case">
       <h2> НАШІ РЕЗУЛЬТАТИ:</h2>
       <Swiper 
-         modules={[Navigation, Pagination,Zoom]}
-         centeredSlides={true} 
-         slidesPerView={1}
-         initialSlide={2}
-         pagination={{ clickable: true }}
-         navigation={{ clickable:true}}
-         allowTouchMove ={true}
-         zoom={true}
-         loop={true}
-         breakpoints= {{
-           // Когда ширина экрана меньше или равна 768px
-           1100: {
-             Pagination:false,
-             allowTouchMove: false,
-             navigation: false,
-             slidesPerView: 3,}}}
-      >
-        <SwiperSlide style={{ margin: 0
-        }}><div className="swiper-zoom-container">
-            <img src="/icons/res/res1.webp"
-            alt="Грошове забезпечення">
-</img>
-          </div>
+      modules={[Navigation, Pagination, Zoom]}
+      centeredSlides={true}
+      spaceBetween={50}
+      slidesPerView={1}
+      initialSlide={2}
+      pagination={{ clickable: true }}
+      navigation={{
+        nextEl: '.swiper-button-next',  // Явно указываем классы для кнопок навигации
+        prevEl: '.swiper-button-prev'
+      }}
+      allowTouchMove={true}
+      zoom={true}
+      loop={true}
+      breakpoints={{
+        1100: {
+          slidesPerView: 3,
+          pagination: false,
+          navigation: false,
+          allowTouchMove: false,
+        },
+        0: {
+          slidesPerView: 1,
+          pagination: true,
+          navigation: true,
+          allowTouchMove: true,
+        }
+      }}
+>
+  <SwiperSlide>
+    <div className="swiper-zoom-container">
+      <img 
+        src="/icons/res/res1.webp"
+        alt="Грошове забезпечення"
+      />
+    </div>
   </SwiperSlide>
-  <SwiperSlide><div className="swiper-zoom-container">
-            <img src="/icons/res/res2.webp" 
-            alt="Грошове забезпечення"></img>
-*
 
-          </div>
+  <SwiperSlide>
+    <div className="swiper-zoom-container">
+      <img 
+        src="/icons/res/res2.webp"
+        alt="Грошове забезпечення"
+      />
+    </div>
   </SwiperSlide>
-  <SwiperSlide><div className="swiper-zoom-container">
-            <img src="/icons/res/res3.webp"  className='slides'
-            alt="Грошове забезпечення" ></img>
-          </div>
+
+  <SwiperSlide>
+    <div className="swiper-zoom-container">
+      <img 
+        src="/icons/res/res3.webp"
+        alt="Грошове забезпечення"
+      />
+    </div>
   </SwiperSlide>
-      </Swiper>
-  
+  <div className="swiper-button-next"></div>
+  <div className="swiper-button-prev"></div>
+</Swiper>
+
   </section>
 
               <div className="contacts">
@@ -230,7 +261,7 @@ function Homepage() {
               window.location.href = "https://www.viber.com/";
             }
           }}
-          ><img src="/icons/messengers/viber_icon_white.svg" alt="viber"></img></a>
+          ><img src="/icons/messengers/Viber_icon_white.svg" alt="viber"></img></a>
           <a href="https://signal.me/#eu/F8axajmr2fkdM4fu5Vl8yFJwj1W31Us0SMwc0h0axGvNA8Svn0NL-JkxLsnJBnCC" target="_blank" rel="noopener noreferrer"><img src='/icons/messengers/Signal-Logo-Ultramarine.svg' alt="signal"></img></a>
           <a href="https://t.me/Nlaw_company"><img src="/icons/messengers/teleg.svg" alt="telegram" target="_blank" rel="noopener noreferrer"></img></a>
           <a href="https://wa.me/message/X3PEXBN6BKQHF1" target="_blank" rel="noopener noreferrer"><img src='/icons/messengers/Digital_Glyph_White.svg' alt="whatsapp"></img></a>

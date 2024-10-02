@@ -24,12 +24,14 @@ html{
    text-decoration: none;
     display: inline-block;
     font-size: 18px;
+    border: black 2px solid;
     font-weight: 900;
   border-radius: 24px;
   cursor: pointer;
   -webkit-transition: all 0.3s;
   margin-top: 2.5%;
   }
+
   .phone-prefix{
 position: relative;
   font-size: 22px;
@@ -1028,8 +1030,6 @@ padding-right: 4%;
       .consulting>.bods>img {
         width: 95%;
       }
-      .swiper-wrapper{
-        margin-left: 10px;}
 
 
     }
