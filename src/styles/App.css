@@ -395,7 +395,7 @@ margin-bottom: 20px;
       background-color: rgba(255, 204, 0, 1);
       border: none;
      color:rgba(29, 29, 27, 1);
-      padding: 16px 145px;
+      padding: 16px 90px;
       text-align: center;
      text-decoration: none;
      font-weight: 700;
@@ -827,7 +827,7 @@ background-position: 0;
           width: 20px;
       }
       .senderbutt{
-    padding: 16px 160px;
+    padding: 16px 50px;
       }
   
       .AccordionRoot{
@@ -881,8 +881,9 @@ font-size: 16px;    }
   background-position-x: 39%;    
   }
   .senderbutt{
+    font-size: 20px;
     margin-top: 20px;
-      padding: 20px 124px;
+      padding: 20px 50px;
   }
 
 
@@ -930,6 +931,9 @@ font-size: 16px;    }
     .help>h2{
 
         text-align: center;
+    }
+    .consulting>p{
+      font-size: 22px;
     }
 
     .bods>img{
@@ -1046,6 +1050,11 @@ padding-right: 4%;
       }
       .documents>h2{
         font-size: 30;
+      }
+      .senderbutt{
+        font-size: 15px;
+        margin-top: 20px;
+          padding: 16px 36px;
       }
       .help>h2{
         font-size: 37px;

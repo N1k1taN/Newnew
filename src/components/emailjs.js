@@ -90,7 +90,7 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
             {phoneError && <p style={{ color: 'red' }}>Неправильний формат номера</p>}
 
             <button className="senderbutt" type="submit">
-              Зателефонуйте мені
+              ЗАТЕЛЕФОНУЙТЕ МЕНІ
             </button>
           </form>
         )}
