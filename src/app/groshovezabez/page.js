@@ -5,6 +5,7 @@ import "../../styles/about.css";
 import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
 import { useEffect } from "react";
+import Image from "next/image";
 
 function Groshovezabez() {
   useEffect(() => {
@@ -16,8 +17,15 @@ function Groshovezabez() {
       <div className="alde">
       <div className="about">
         <h1>Грошове забезпечення та додаткова винагорода</h1>
-        <img src="/icons/grosh.jpg"></img>
-        <p>Відповідно до чинного законодавства України, 
+        <Image
+ src="/icons/grosh.webp"  
+ alt="Грошове забезпечення"
+  width={500}
+  height={300}
+  layout="responsive"  // делает изображение адаптивным
+  priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
+
+      />        <p>Відповідно до чинного законодавства України, 
             військовослужбовці повинні мати достатній рівень грошового забезпечення, а у разі ведення військового стану мають право на додаткову винагороду за наступних підстав: </p>
 <p>-Перебування в зоні бойових дій (Бойові) </p>
 <p>-Стаціонарне лікування внаслідок поранення у лікувальних закладах</p>

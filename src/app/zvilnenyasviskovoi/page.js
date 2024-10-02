@@ -5,6 +5,7 @@ import "../../styles/about.css";
 import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
 import { useEffect } from "react";
+import Image from "next/image";
 
 
 function Zvilnenyasviskovoi() {
@@ -17,8 +18,15 @@ function Zvilnenyasviskovoi() {
       <div className="alde">
       <div className="about">
         <h1>Звільнення з військової служби</h1>
-        <img src="/icons/zvilnenya.jpg"></img>
-<h3>Рапорт на звільнення з військової служби подається за наявністю наступних підстав:</h3>
+        <Image
+ src="/icons/zvilnenya.webp"  
+ alt="Звільнення з війскової служби"
+  width={500}
+  height={300}
+  layout="responsive"  // делает изображение адаптивным
+  priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
+
+      />  <h3>Рапорт на звільнення з військової служби подається за наявністю наступних підстав:</h3>
 <p>-За сімейними обставинами </p>
 <p>-За станом здоров&#39;я </p>
 <p>Існують непоодинокі випадки, коли рапорт на звільнення з військової служби не розглядається, або військовий отримує незаконну відмову. </p>

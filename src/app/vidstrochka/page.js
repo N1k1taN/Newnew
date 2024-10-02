@@ -5,6 +5,7 @@ import "../../styles/about.css";
 import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
 import { useEffect } from "react";
+import Image from "next/image";
 
 function Vidstrochka() {
   useEffect(() => {
@@ -16,8 +17,15 @@ function Vidstrochka() {
       <div className="alde">
       <div className="about">
         <h1>Відстрочка від мобілізації</h1>
-        <img src="/icons/vidstr.jpg"></img>
-<h3>Відстрочка від військової служби є правом особи, яка повинна його використати за наявністю законних підстав, зокрема:</h3>
+  <Image
+ src="/icons/vidstr.webp"  
+ alt="Відстрочка від мобілізації"
+  width={500}
+  height={300}
+  layout="responsive"  // делает изображение адаптивным
+  priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
+
+      /> <h3>Відстрочка від військової служби є правом особи, яка повинна його використати за наявністю законних підстав, зокрема:</h3>
 <p>-За сімейними обставинами </p>
 <p>-Наявністю інвалідності</p>
 <p>-Навчання у вищому закладі </p>

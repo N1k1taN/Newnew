@@ -65,7 +65,8 @@ const Dropdown = () => {
           <li className="dad"><Link href="/#vidguk" className="linked" onClick={toggleDropdown}>Відгуки</Link></li>
           <li className="dad"><Link href="/#case" className="linked" onClick={toggleDropdown}>Кейси</Link></li>
           <li className="dad"><Link href="/#contacts" className="linked" onClick={toggleDropdown}>Контакти</Link></li>
-          <li className="dad">Тел:+380937452557</li>
+          <li className="dad"><a className="phonebutton"href="tel:+380937452557">Тел: +380937452557</a>
+          </li>
           <li className="dad">
             <a className='socials-dropdown' href='viber://chat?number=%2B380937452557' target="_blank" rel="noopener noreferrer"
               onClick={(e) => {

@@ -1,11 +1,16 @@
 import React from "react";
 import Link from "next/link";
 import Dropdown from "./dropdown";
+import Image from "next/image";
 
 const Navbar=()=> {    
 return <div className="navbar">
     <Link href="/#home" className="logoname">
-        <img src="/icons/logo.png" alt="logo"></img>
+        <Image src="/icons/logo.png" alt="logo"
+                    width={350}
+                    height={550}
+                    objectFit='contain'
+                    priority={true}   />
     </Link>
     <Link href="/#help" className="linked">ПОСЛУГИ</Link>
     <Link href="/#about" className="linked">ПРО НАС</Link>

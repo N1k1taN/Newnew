@@ -57,10 +57,10 @@ const Callpg = () => {
           </button>
           {menuOpen && (
             <div className='pgd'>
-              <form onSubmit={handleSubmit(onSubmit)}>
-                <h2>Отправьте нам номер телефона</h2>
-                  <label htmlFor="phone">Номер телефону</label>
+              <form className="Callform" onSubmit={handleSubmit(onSubmit)}>
+                <h2>Залиште свій номер телефону і ми зв'яжемося з вами!</h2>
                   <input
+                  placeholder="+380"
                     id="phone"
                     type="tel"
                     {...register('phone', { 
@@ -72,8 +72,9 @@ const Callpg = () => {
                     })}
                   />
                   {errors.phone && <p>{errors.phone.message}</p>}
-                <button className="senderbutt2" type="submit">Замовити</button>
-                <p>Або ви можете зателефонувати нам самостійно:+380937452557</p>
+                <button className="senderbutt2" type="submit">Замовити дзвінок</button>
+                <p>Або ви можете зателефонувати нам самостійно:</p>
+                <p>+380937452557</p>
                 </form>
             </div>
           )}

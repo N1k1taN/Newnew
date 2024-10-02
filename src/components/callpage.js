@@ -32,7 +32,7 @@ const OpenMenuButton = () => {
     <div>
       {/* Button to manually open the contact form */}
       <button className="butcall" onClick={openMenu}>
-        <img className="callpng" src="/icons/call.png" alt="call"></img>Замовити дзвінок
+       Замовити консультацію
       </button>
 
       {/* Background and Call Page (conditionally rendered) */}

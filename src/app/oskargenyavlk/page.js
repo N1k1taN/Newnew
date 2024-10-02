@@ -5,7 +5,7 @@ import "../../styles/about.css";
 import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
 import { useEffect } from "react";
-
+import Image from "next/image";
 
 function Oskargenyavlk() {
   useEffect(() => {
@@ -17,7 +17,15 @@ function Oskargenyavlk() {
       <div className="alde">
       <div className="about">
         <h1>Оскарження рішення ВЛК</h1>
-        <img src="/icons/vislav.jpg"></img>
+        <Image
+ src="/icons/vislav.webp"  
+ alt="Оскарження рішення ВЛК"
+  width={500}
+  height={300}
+  layout="responsive"  // делает изображение адаптивным
+  priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
+
+      />  
         <h3>Рішення військово - лікарської комісії підлягає оскарженню в наступних випадках:</h3>
 <p>-Необ&#39;єктивність лікарської комісії </p>
 <p>-Порушення процедури проведення ВЛК</p>

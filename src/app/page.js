@@ -11,6 +11,7 @@ import Callpg from '../components/callpg'
 import React, { useEffect } from 'react';
 import classNames from 'classnames';
 import Head from 'next/head';
+import Image from 'next/image';
 
 
 
@@ -43,7 +44,13 @@ function Homepage() {
 
               <div className="consulting " id="about">
   <h2>ПРО НАШУ КОМПАНІЮ</h2>
-  <h3 className="bods"><img src="/icons/logo.png" alt="logo"></img></h3>
+  <h3 className="bods"><Image src="/icons/logo.png" 
+  alt="Грошове забезпечення"
+  width={500}
+  height={300}
+  layout="responsive"  // делает изображение адаптивным
+  priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
+/></h3>
   <p>Наше гасло «ЕКСПЕРТНІСТЬ, УСПІХ, ПРОФЕСІОНАЛІЗМ»</p>
   <p>NLAW Company, являється юридичною компанією заснованою у 2024 році в Україні, керуючим партнером Науменко Ярославом Олексійовичем.</p>
   <p>Так, ми досить молоді, але й досить амбіціозні.</p>
@@ -58,27 +65,47 @@ function Homepage() {
     <Swiper 
             modules={[Navigation, Pagination,Zoom]}
             centeredSlides={true} 
-            spaceBetween={5}
+            spaceBetween={50}
             slidesPerView={1}
             initialSlide={2}
             pagination={{ clickable: true }}
-            navigation
+            navigation={{ clickable:true }}
+            allowTouchMove ={true}
             zoom={true}
+            loop={true}
             breakpoints= {{
               // Когда ширина экрана меньше или равна 768px
               1100: {
+                Pagination:false,
+                allowTouchMove: false,
+                navigation: false,
                 slidesPerView: 3,}}}
       >
         <SwiperSlide style={{ margin: 0 }}><div className="swiper-zoom-container">
-            <img src="/icons/vidguk/photo_2024-09-29_16-33-13.jpg" className="imgcont" alt="Slide 1" />
+            <img src="/icons/vidguk/photo_2024-09-29_16-33-13.jpg" className="imgcont"
+                 alt="Грошове забезпечення"
+                 width={350}
+                 height={550}
+                 priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
+               />
           </div>
   </SwiperSlide>
   <SwiperSlide><div className="swiper-zoom-container">
-            <img src="/icons/vidguk/photo_2024-09-29_16-34-10.jpg" className="imgcont" alt="Slide 2" />
+            <img src="/icons/vidguk/photo_2024-09-29_16-34-10.jpg" className="imgcont" 
+                 alt="Грошове забезпечення"
+                 width={350}
+                 height={550}
+                 priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
+                />
           </div>
   </SwiperSlide>
   <SwiperSlide><div className="swiper-zoom-container">
-            <img src="/icons/vidguk/photo_2024-09-29_16-34-16.jpg" className="imgcont" alt="Slide 3" />
+            <img src="/icons/vidguk/photo_2024-09-29_16-34-16.jpg" className="imgcont" 
+                 alt="Грошове забезпечення"
+                 width={350}
+                 height={550}
+                 priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
+                />
           </div>
   </SwiperSlide>
       </Swiper>
@@ -117,30 +144,40 @@ function Homepage() {
               <section id="case">
       <h2> НАШІ РЕЗУЛЬТАТИ:</h2>
       <Swiper 
-            modules={[Navigation, Pagination,Zoom]}
-            centeredSlides={true} 
-            spaceBetween={5}
-            slidesPerView={1}
-            initialSlide={2}
-            pagination={{ clickable: true }}
-            navigation
-            zoom={true}
-            loop={true}
-            breakpoints= {{
-              // Когда ширина экрана меньше или равна 768px
-              1100: {
-                slidesPerView: 3,}}}
+         modules={[Navigation, Pagination,Zoom]}
+         centeredSlides={true} 
+         slidesPerView={1}
+         initialSlide={2}
+         pagination={{ clickable: true }}
+         navigation={{ clickable:true}}
+         allowTouchMove ={true}
+         zoom={true}
+         loop={true}
+         breakpoints= {{
+           // Когда ширина экрана меньше или равна 768px
+           1100: {
+             Pagination:false,
+             allowTouchMove: false,
+             navigation: false,
+             slidesPerView: 3,}}}
       >
-        <SwiperSlide style={{ margin: 0 }}><div className="swiper-zoom-container">
-            <img src="/icons/res/res1.webp" alt="Slide 1" />
+        <SwiperSlide style={{ margin: 0
+        }}><div className="swiper-zoom-container">
+            <img src="/icons/res/res1.webp"
+            alt="Грошове забезпечення">
+</img>
           </div>
   </SwiperSlide>
   <SwiperSlide><div className="swiper-zoom-container">
-            <img src="/icons/res/res2.webp" alt="Slide 2" />
+            <img src="/icons/res/res2.webp" 
+            alt="Грошове забезпечення"></img>
+*
+
           </div>
   </SwiperSlide>
   <SwiperSlide><div className="swiper-zoom-container">
-            <img src="/icons/res/res3.webp" alt="Slide 3" />
+            <img src="/icons/res/res3.webp"  className='slides'
+            alt="Грошове забезпечення" ></img>
           </div>
   </SwiperSlide>
       </Swiper>
@@ -148,8 +185,7 @@ function Homepage() {
   </section>
 
               <div className="contacts">
-{/*               "/icons/res/res1.webp"
- */}      <div className="contactinfo">
+  <div className="contactinfo">
           <div>
               <div>
               <p>АДРЕСА</p>
