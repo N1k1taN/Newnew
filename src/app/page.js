@@ -50,7 +50,6 @@ function Homepage() {
   width={500}
   height={300}
   layout="responsive"  // делает изображение адаптивным
-  priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
 /></h3>
   <p>Наше гасло «ЕКСПЕРТНІСТЬ, УСПІХ, ПРОФЕСІОНАЛІЗМ»</p>
   <p>NLAW Company, являється юридичною компанією заснованою у 2024 році в Україні, керуючим партнером Науменко Ярославом Олексійовичем.</p>
@@ -80,16 +79,7 @@ function Homepage() {
       breakpoints={{
         1100: {
           slidesPerView: 3,
-          pagination: false,
-          navigation: false,
-          allowTouchMove: false,
         },
-        0: {
-          slidesPerView: 1,
-          pagination: true,
-          navigation: true,
-          allowTouchMove: true,
-        }
       }}
       >
         <SwiperSlide style={{ margin: 0 }}><div className="swiper-zoom-container">
@@ -119,6 +109,17 @@ function Homepage() {
                 />
           </div>
   </SwiperSlide>
+  <SwiperSlide><div className="swiper-zoom-container">
+            <img src="/icons/vidguk/vidguk4.webp" className="imgcont" 
+                 alt="Грошове забезпечення"
+                 width={350}
+                 height={550}
+                 priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
+                />
+          </div>
+  </SwiperSlide>
+  <div className="swiper-button-next"></div>
+  <div className="swiper-button-prev"></div>
       </Swiper>
   </div>
 
@@ -171,16 +172,7 @@ function Homepage() {
       breakpoints={{
         1100: {
           slidesPerView: 3,
-          pagination: false,
-          navigation: false,
-          allowTouchMove: false,
         },
-        0: {
-          slidesPerView: 1,
-          pagination: true,
-          navigation: true,
-          allowTouchMove: true,
-        }
       }}
 >
   <SwiperSlide>
@@ -205,6 +197,14 @@ function Homepage() {
     <div className="swiper-zoom-container">
       <img 
         src="/icons/res/res3.webp"
+        alt="Грошове забезпечення"
+      />
+    </div>
+  </SwiperSlide>
+  <SwiperSlide>
+    <div className="swiper-zoom-container">
+      <img 
+        src="/icons/res/res4.webp"
         alt="Грошове забезпечення"
       />
     </div>
