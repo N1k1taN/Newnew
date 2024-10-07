@@ -801,6 +801,10 @@ padding: 10px 15px 10px 15px;
 #vidguk{
   scroll-margin-top: 90px;
 }
+.Comments{
+  padding-bottom: 25px;
+}
+
 .thx{
   vertical-align: center;
   font-size: 30px;
@@ -939,6 +943,10 @@ width: 100%;
     }
     .Ownerb{
       background-position:  top;
+    }
+    .Comments>span{
+      padding-left: 30%;
+      padding-right: 30%;
     }
     .callpage{
       height: 650px;

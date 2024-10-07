@@ -62,7 +62,7 @@ const Dropdown = () => {
         <ul className="dropdown-menu">
           <li className="dad"><Link href="/#help" className="linked" onClick={toggleDropdown}>Послуги</Link></li>
           <li className="dad"><Link href="/#vidguk" className="linked" onClick={toggleDropdown}>Відгуки</Link></li>
-          <li className="dad"><Link href="/#about" className="linked" onClick={toggleDropdown}>Про нас</Link></li>
+          <li className="dad"><Link href="/onas" className="linked" onClick={toggleDropdown}>Про нас</Link></li>
           <li className="dad"><Link href="/#case" className="linked" onClick={toggleDropdown}>Кейси</Link></li>
           <li className="dad"><Link href="/#contacts" className="linked" onClick={toggleDropdown}>Контакти</Link></li>
           <li className="dad"><a className="phonebutton"href="tel:+380937452557">Тел: +380937452557</a>
