@@ -51,6 +51,68 @@ text-shadow: none;}
 .about>h3{
 font-size: 28px;
 }
+.breezetext>p{
+    
+    font-size: 25px;
+padding: 30px;
+}
+h3{
+    padding-top: 30px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.numbrdeals{
+    width: 100%;
+    background-image: url(/icons/onasphoto.jpg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    color: white;
+    backdrop-filter: blur(50px);
+}
+.numbrdeals>h2{
+    padding-top: 30px;
+    padding-bottom: 80px;
+    text-align: center;
+    font-size: 35px;
+
+}
+.deals{display: flex;
+    flex-direction: row;
+    justify-content: center;}
+.deal{
+    height: 100%;
+    text-align: center;
+    width: 30%;
+}
+.deal>p{
+    padding-top: 80px;
+    font-size: 72px;
+    font-weight: 1000;
+    padding-bottom: 25px;
+}
+.deal>div{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 30px;
+    padding-bottom: 30px;
+}
+
+
+@media all and (max-width:1100px){
+    .deals{
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+    }
+    .deal{
+        width: 80%;
+    }
+}
+
 @media all and (max-width:700px){
     .about{
         width: 100%;

@@ -2,66 +2,55 @@ import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 
 function ContactForm({ handleBackgroundClick, callPageRef }) {
-  const preset = '+38'; // Предустановленные цифры
-  const [value, setValue] = useState(preset);
+
+  const [phoneNumber, setPhoneNumber] = useState(''); // State to store phone number
   const [phoneError, setPhoneError] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const form = useRef();
 
-  const handleChange = (e) => {
-    const newValue = e.target.value;
-
-    // Разрешаем ввод только после предустановленных цифр
-    if (newValue.startsWith(preset)) {
-      setValue(newValue);
-      setPhoneError(false); // Сбрасываем ошибку при изменении
-    }
-  };
-
-  const handleKeyDown = (e) => {
-    // Запрещаем удаление предустановленных цифр
-    if (e.target.selectionStart <= preset.length && (e.key === 'Backspace' || e.key === 'Delete')) {
-      e.preventDefault();
-    }
-  };
-
   const sendEmail = (e) => {
     e.preventDefault();
 
-    const phoneNumber = value.slice(preset.length); // Извлекаем только введенные пользователем цифры
-
-    // Проверяем длину введенного номера (без префикса)
-    const phoneRegex = /^[0-9]{10}$/; // Должно быть ровно 9 цифр после +380
+    // Проверяем длину введенного номера (9 цифр)
+    const phoneRegex = /^[0-9]{12}$/; // Номер должен быть точно 9 цифр
 
     if (!phoneRegex.test(phoneNumber)) {
       setPhoneError(true);
       return;
     }
 
-    setPhoneError(false); // Сбрасываем ошибку
+    setPhoneError(false); // Сброс ошибки, если валидация проходит
 
     // Отправка формы через EmailJS
     emailjs
       .sendForm('service_6y4cf6d', 'template_j9ce8db', form.current, 'Oa2baTXpg0UruiePo')
       .then(
         (result) => {
-          setFormSubmitted(true); // Успешная отправка
+          setFormSubmitted(true); // Успешная отправка формы
         },
         (error) => {
-          console.error('Ошибка при отправке:', error.text);
+          console.error('Ошибка отправки формы:', error.text);
         }
       );
 
-    e.target.reset();
-    setValue(preset); // Сбрасываем значение поля ввода после отправки
+    e.target.reset(); // Сброс формы после отправки
+    setPhoneNumber(''); // Очистить состояние номера телефона
+  };
+
+  // Обработчик для обновления состояния номера телефона
+  const handlePhoneNumberChange = (e) => {
+    const input = e.target.value;
+    if (/^[0-9]*$/.test(input)) {  // Проверяем, что введённые символы - цифры
+      setPhoneNumber(input); // Обновляем состояние только если это цифры
+    }
   };
 
   return (
     <div
       className="backgroundpage"
       style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 999 }}
-      onClick={handleBackgroundClick}  // Обработчик клика для закрытия фона
+      onClick={handleBackgroundClick}  // Обработчик для закрытия фона по клику
     >
       <div className="callpage" ref={callPageRef} onClick={(e) => e.stopPropagation()}> {/* Прекращаем всплытие клика */}
         {formSubmitted ? (
@@ -77,13 +66,15 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
             <div>
               <input
                 type="tel"
-                value={value}
-                onChange={handleChange}
-                onKeyDown={handleKeyDown}
+                value={phoneNumber} // Контролируемый input
+                onChange={handlePhoneNumberChange} // Обновление состояния при вводе
                 name="phone-number"
                 id="phone-number"
-                maxLength="13" // +380 и еще 9 цифр
+                maxLength="12" // Ограничение на ввод 9 цифр
+                placeholder='+380'
                 required
+                inputMode="numeric" // Открывает цифровую клавиатуру на мобильных устройствах
+                pattern="[0-9]*" // Ограничение на ввод только цифр
               />
             </div>
 

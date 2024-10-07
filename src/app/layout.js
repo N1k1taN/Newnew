@@ -1,7 +1,7 @@
-import '../styles/App.css';
 import Navbar from '../components/navbar';
-import { Varela } from 'next/font/google';
-const varela = Varela({
+import { Roboto } from 'next/font/google';
+import Footer from '@/components/Footer';
+const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
 });
@@ -16,9 +16,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ua">
-      <body className={varela.className}>
+      <body className={roboto.className}>
         <Navbar />
         <main>{children}</main>
+        <Footer></Footer>
       </body>
     </html>
   );

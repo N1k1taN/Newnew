@@ -13,9 +13,9 @@ return <div className="navbar">
                     priority={true}   />
     </Link>
     <Link href="/#help" className="linked">ПОСЛУГИ</Link>
-    <Link href="/#about" className="linked">ПРО НАС</Link>
-    <Link href="/#vidguk" className="linked">ВІДГУКИ</Link>
     <Link href="/#case" className="linked">КЕЙСИ</Link>
+    <Link href="/onas" className="linked">ПРО НАС</Link>
+    <Link href="/#vidguk" className="linked">ВІДГУКИ</Link>
     <Link href="/#contacts" className="linked">КОНТАКТИ</Link>
     <Dropdown></Dropdown>
         </div>
