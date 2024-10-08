@@ -32,9 +32,9 @@ const Accordions = () => {
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
       }}
     >
-      <Accordion.Root className="AccordionRoot" type="single" collapsible>
+      <Accordion.Root className="AccordionRoot" type="multiple" collapsible>
         <Accordion.Item className="AccordionItem" value="item-1">
-          <AccordionTrigger>
+          <AccordionTrigger className="dirk">
             <div
               onClick={() => handleLinkClick('/vidstrochka')}
               style={{ cursor: 'pointer' }}
@@ -199,8 +199,22 @@ const AccordionTrigger = React.forwardRef(({ children, className, ...props }, fo
       className={classNames('AccordionTrigger', className)}
       {...props}
       ref={forwardedRef}
+      asChild
     >
-      {children}
+      <motion.div
+        initial="collapsed"
+        animate="open"
+        whileHover="hover"
+        whileTap="tap"
+        variants={{
+          collapsed: {  },
+          open: {  },
+          hover: { scale: 1.05 },
+          tap: { scale: 0.95 },
+        }}
+      >
+        {children}
+      </motion.div>
     </Accordion.Trigger>
   </Accordion.Header>
 ));
@@ -211,8 +225,19 @@ const AccordionContent = React.forwardRef(({ children, className, ...props }, fo
     className={classNames('AccordionContent', className)}
     {...props}
     ref={forwardedRef}
+    asChild
   >
-    <div className="AccordionContentText">{children}</div>
+    <motion.div
+      initial="collapsed"
+      animate="open"
+      exit="collapsed"
+      variants={{
+        collapsed: { opacity: 0, height: 0, transition: { duration: 0.6, ease: "easeInOut" } },
+        open: { opacity: 1, height: 'auto', transition: { duration: 0.6, ease: "easeInOut" } },
+      }}
+    >
+      <div className="AccordionContentText">{children}</div>
+    </motion.div>
   </Accordion.Content>
 ));
 AccordionContent.displayName = 'AccordionContent';

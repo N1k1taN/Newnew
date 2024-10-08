@@ -6,8 +6,11 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/zoom';
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 const CaseResults = () => {
+  const { ref: sectionRef, inView: isVisible } = useInView({ triggerOnce: true, threshold: 0.3 });
   const resultSlides = [
     { imgSrc: '/icons/res/res1.webp', text: 'Юристи NLAW Company, успішно отримали відстрочку для клієнта на підставі наявності дружини з ІІ групою інвалідності' },
     { imgSrc: '/icons/res/res2.webp', text: 'Юристи NLAW Company, успішно отримали оформили відстрочку для клієнта, який являється науковим співробітником' },
@@ -17,7 +20,13 @@ const CaseResults = () => {
   const [resultActiveIndex, setResultActiveIndex] = useState(0);
 
   return (
-    <section id="case">
+    <motion.section
+      id="case"
+      ref={sectionRef}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, ease: 'easeInOut' }}
+    >
       <h2> НАШІ РЕЗУЛЬТАТИ:</h2>
       <Swiper
         modules={[Navigation, Pagination, Zoom]}
@@ -51,11 +60,12 @@ const CaseResults = () => {
         <div className="swiper-button-prev"></div>
       </Swiper>
       <h3>{resultSlides[resultActiveIndex].text}</h3>
-    </section>
+    </motion.section>
   );
 };
 
 const Comments = () => {
+  const { ref: commentsRef, inView: isVisible } = useInView({ triggerOnce: true, threshold: 0.3 });
   const slides = [
     { imgSrc: '/icons/vidguk/photo_2024-09-29_16-33-13.jpg' },
     { imgSrc: '/icons/vidguk/photo_2024-09-29_16-34-10.jpg' },
@@ -65,7 +75,14 @@ const Comments = () => {
   const [activeIndex, setActiveIndex] = useState(2);
 
   return (
-    <div className="Comments" id="vidguk">
+    <motion.div
+      className="Comments"
+      id="vidguk"
+      ref={commentsRef}
+      initial={{ opacity: 0, y: 50 }}
+      animate={isVisible ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.6, ease: 'easeInOut' }}
+    >
       <h2>ВІДГУКИ</h2>
       <span>Одна із вищих нагород для нас це відгук задоволеного клієнта!</span>
       <Swiper
@@ -106,7 +123,7 @@ const Comments = () => {
         <div className="swiper-button-next"></div>
         <div className="swiper-button-prev"></div>
       </Swiper>
-    </div>
+    </motion.div>
   );
 };
 
