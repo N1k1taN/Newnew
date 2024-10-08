@@ -12,6 +12,7 @@ function Vidstrochka() {
     document.title = "Відстрочка";
   })
   return (
+    
     <div>
 <Callpg></Callpg>
       <div className="alde">

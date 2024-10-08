@@ -8,10 +8,6 @@ const roboto = Roboto({
 
 
 
-export const metadata = {
-  title: 'My Website',
-  description: 'My Next.js website with App Router',
-};
 
 export default function RootLayout({ children }) {
   return (

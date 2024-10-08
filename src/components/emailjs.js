@@ -1,8 +1,9 @@
+'use client';
+
 import React, { useRef, useState } from 'react';
 import emailjs from 'emailjs-com';
 
 function ContactForm({ handleBackgroundClick, callPageRef }) {
-
   const [phoneNumber, setPhoneNumber] = useState(''); // State to store phone number
   const [phoneError, setPhoneError] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -12,8 +13,8 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Проверяем длину введенного номера (9 цифр)
-    const phoneRegex = /^[0-9]{12}$/; // Номер должен быть точно 9 цифр
+    // Проверяем длину введенного номера (12 цифр)
+    const phoneRegex = /^[0-9]{12}$/; // Номер должен быть точно 12 цифр
 
     if (!phoneRegex.test(phoneNumber)) {
       setPhoneError(true);
@@ -41,7 +42,7 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
   // Обработчик для обновления состояния номера телефона
   const handlePhoneNumberChange = (e) => {
     const input = e.target.value;
-    if (/^[0-9]*$/.test(input)) {  // Проверяем, что введённые символы - цифры
+    if (/^[0-9]*$/.test(input)) { // Проверяем, что введённые символы - цифры
       setPhoneNumber(input); // Обновляем состояние только если это цифры
     }
   };
@@ -50,7 +51,7 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
     <div
       className="backgroundpage"
       style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 999 }}
-      onClick={handleBackgroundClick}  // Обработчик для закрытия фона по клику
+      onClick={handleBackgroundClick} // Обработчик для закрытия фона по клику
     >
       <div className="callpage" ref={callPageRef} onClick={(e) => e.stopPropagation()}> {/* Прекращаем всплытие клика */}
         {formSubmitted ? (
@@ -70,7 +71,7 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
                 onChange={handlePhoneNumberChange} // Обновление состояния при вводе
                 name="phone-number"
                 id="phone-number"
-                maxLength="12" // Ограничение на ввод 9 цифр
+                maxLength="12" // Ограничение на ввод 12 цифр
                 placeholder='+380'
                 required
                 inputMode="numeric" // Открывает цифровую клавиатуру на мобильных устройствах

@@ -1,6 +1,4 @@
-"use client";
-import { Navigation, Pagination, Zoom } from 'swiper/modules';
-import { Swiper, SwiperSlide } from 'swiper/react';
+
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -12,35 +10,28 @@ import Callpg from '../components/callpg';
 import classNames from 'classnames';
 import Head from 'next/head';
 import Image from 'next/image';
-import React, { useState, useEffect } from 'react';
+import { CaseResults,Comments } from '@/components/sliders';
+
 
 function Homepage() {
-  const [activeIndex, setActiveIndex] = useState(2); // Начальное значение слайда
-
-  const slides = [
-    { imgSrc: '/icons/vidguk/photo_2024-09-29_16-33-13.jpg'  },
-    { imgSrc: '/icons/vidguk/photo_2024-09-29_16-34-10.jpg' },
-    { imgSrc: '/icons/vidguk/photo_2024-09-29_16-34-16.jpg'  },
-    { imgSrc: '/icons/vidguk/vidguk4.webp' },
-  ];
-
-  const resultSlides = [
-    { imgSrc: '/icons/res/res1.webp', text: 'Юристи NLAW Company, успішно отримали відстрочку для клієнта на підставі наявності дружини з ІІ групою інвалідності' },
-    { imgSrc: '/icons/res/res2.webp', text: 'Юристи NLAW Company, успішно отримали оформили відстрочку для клієнта, який являється науковим співробітником' },
-    { imgSrc: '/icons/res/res3.webp', text: 'Юристи NLAW Company, успішно отримали відстрочку для клієнта на підставі наявності дружини з ІІ групою інвалідності' },
-    { imgSrc: '/icons/res/res4.webp', text: 'Юристи NLAW Company успішно виправили недостовірні відомості в «Резерв+», щодо військовозобовʼязаного, який має бути виключений з військового обліку' },
-  ];
-
-  const [resultActiveIndex, setResultActiveIndex] = useState(0);
 
   return (
     <div>
-      <Head>
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-      </Head>
+<Head>
+  <title>Військовий Адвокат - Юридична Допомога у Вирішенні Питань з Військового Права</title>
+  <meta name="description" content="Військовий адвокат NLAW Company надає професійну юридичну допомогу по всій Україні. Вирішення питань з мобілізації, військової служби, оскарження рішень та інші юридичні послуги." />
+  <meta name="keywords" content="військовий адвокат, юридична допомога військовослужбовцям, відстрочка від мобілізації, NLAW Company, оскарження рішень, юридична підтримка, звільнення з військової служби" />
+  <meta name="robots" content="index, follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="Військовий Адвокат - Юридична Допомога у Вирішенні Питань з Військового Права" />
+  <meta property="og:description" content="Юридична допомога військовослужбовцям по всій Україні. Відстрочка від мобілізації, звільнення з військової служби, оскарження рішень та інші послуги." />
+  <meta property="og:image" content="/icons/logo.png" />
+  <meta property="og:url" content="https://вашсайт.com" />
+  <link rel="icon" href="/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+</Head>
 
       <Callpg />
       <div className="mainpage" id="home">
@@ -111,86 +102,8 @@ function Homepage() {
             <div className='Ownerb'></div>
           </div>
         </div>
-        <section id="case">
-          <h2> НАШІ РЕЗУЛЬТАТИ:</h2>
-          <Swiper
-            modules={[Navigation, Pagination, Zoom]}
-            centeredSlides={true}
-            spaceBetween={50}
-            slidesPerView={1}
-            initialSlide={0}
-            pagination={{ clickable: true }}
-            navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            }}
-            allowTouchMove={true}
-            zoom={true}
-            loop={true}
-            breakpoints={{
-              1100: {
-                slidesPerView: 3,
-              },
-            }}
-            onSlideChange={(swiper) => setResultActiveIndex(swiper.realIndex)}
-          >
-            {resultSlides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <div className="swiper-zoom-container">
-                  <img src={slide.imgSrc} alt={slide.text}
-                  className={resultActiveIndex === index ? 'active-slide' : 'blur-slide'} />
-                </div>
-              </SwiperSlide>
-            ))}
-            <div className="swiper-button-next"></div>
-            <div className="swiper-button-prev"></div>
-          </Swiper>
-          <h3>{resultSlides[resultActiveIndex].text}</h3> {/* Меняем текст в зависимости от текущего слайда */}
-        </section>
-        <div className="Comments" id="vidguk">
-          <h2>ВІДГУКИ</h2>
-          <span>Одна із вищих нагород для нас це відгук задоволеного клієнта!</span>
-          
-          <Swiper
-            modules={[Navigation, Pagination, Zoom]}
-            centeredSlides={true}
-            spaceBetween={50}
-            slidesPerView={1}
-            initialSlide={2}
-            pagination={{ clickable: true }}
-            navigation={{
-              nextEl: '.swiper-button-next',
-              prevEl: '.swiper-button-prev',
-            }}
-            allowTouchMove={true}
-            zoom={true}
-            loop={true}
-            breakpoints={{
-              1100: {
-                slidesPerView: 3,
-              },
-            }}
-            onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
-          >
-            {slides.map((slide, index) => (
-              <SwiperSlide key={index}>
-                <div className="swiper-zoom-container">
-                  <img
-                    src={slide.imgSrc}
-                    alt={slide.text}
-                    className={activeIndex === index ? 'active-slide' : 'blur-slide'}
-                    width={350}
-                    height={550}
-                    priority={true}
-                  />
-                </div>
-              </SwiperSlide>
-            ))}
-            <div className="swiper-button-next"></div>
-            <div className="swiper-button-prev"></div>
-          </Swiper>
-          
-        </div>
+<CaseResults></CaseResults>
+<Comments></Comments>
       </div>
     </div>
   );

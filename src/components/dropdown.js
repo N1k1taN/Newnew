@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 
 const Dropdown = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -59,13 +60,19 @@ const Dropdown = () => {
       </button>
 
       {isDropdownOpen && (
-        <ul className="dropdown-menu">
+        <motion.ul
+          className="dropdown-menu"
+          initial={{ height: 0, opacity: 0 }}
+          animate={{ height: "auto", opacity: 1 }}
+          transition={{ duration: 0.4 }}
+          style={{ overflow: 'hidden' }}
+        >
           <li className="dad"><Link href="/#help" className="linked" onClick={toggleDropdown}>Послуги</Link></li>
           <li className="dad"><Link href="/#vidguk" className="linked" onClick={toggleDropdown}>Відгуки</Link></li>
           <li className="dad"><Link href="/onas" className="linked" onClick={toggleDropdown}>Про нас</Link></li>
           <li className="dad"><Link href="/#case" className="linked" onClick={toggleDropdown}>Кейси</Link></li>
           <li className="dad"><Link href="/#contacts" className="linked" onClick={toggleDropdown}>Контакти</Link></li>
-          <li className="dad"><a className="phonebutton"href="tel:+380937452557">Тел: +380937452557</a>
+          <li className="dad"><a className="phonebutton" href="tel:+380937452557">Тел: +380937452557</a>
           </li>
           <li className="dad">
             <a className='socials-dropdown' href='viber://chat?number=%2B380937452557' target="_blank" rel="noopener noreferrer"
@@ -93,7 +100,7 @@ const Dropdown = () => {
               <img src="/icons/messengers/Digital_Glyph_White.svg" alt="WhatsApp" />
             </a>
           </li>
-        </ul>
+        </motion.ul>
       )}
     </div>
   );

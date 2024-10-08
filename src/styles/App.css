@@ -811,6 +811,11 @@ padding: 10px 15px 10px 15px;
   width: 250px;
   text-align: center;
 }
+.accorn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .senderbutt2{
   background-color: #4b5320;
   border: none;
@@ -953,6 +958,7 @@ width: 100%;
       width: 100%;
       top:4%;
     }
+    
     .backgroundpage::after{
       position: fixed;
       left: 3%;
