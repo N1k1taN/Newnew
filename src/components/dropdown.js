@@ -48,6 +48,20 @@ const Dropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
 
+  const handleSmoothScroll = (e, href) => {
+    e.preventDefault();
+    const targetId = href.split("#")[1];
+    const element = document.getElementById(targetId);
+    if (element) {
+      window.scrollTo({
+        top: element.offsetTop - 70,
+        behavior: "smooth",
+      });
+    } else {
+      window.location.href = href;
+    }
+  };
+
   // Don't render the dropdown if it's not mobile view
   if (!isMobile) {
     return null;
@@ -67,13 +81,12 @@ const Dropdown = () => {
           transition={{ duration: 0.4 }}
           style={{ overflow: 'hidden' }}
         >
-          <li className="dad"><Link href="/#help" className="linked" onClick={toggleDropdown}>Послуги</Link></li>
-          <li className="dad"><Link href="/#vidguk" className="linked" onClick={toggleDropdown}>Відгуки</Link></li>
+          <li className="dad"><a href="/#help" className="linked" onClick={(e) => { toggleDropdown(); handleSmoothScroll(e, '/#help'); }}>Послуги</a></li>
+          <li className="dad"><a href="/#vidguk" className="linked" onClick={(e) => { toggleDropdown(); handleSmoothScroll(e, '/#vidguk'); }}>Відгуки</a></li>
           <li className="dad"><Link href="/onas" className="linked" onClick={toggleDropdown}>Про нас</Link></li>
-          <li className="dad"><Link href="/#case" className="linked" onClick={toggleDropdown}>Кейси</Link></li>
-          <li className="dad"><Link href="/#contacts" className="linked" onClick={toggleDropdown}>Контакти</Link></li>
-          <li className="dad"><a className="phonebutton" href="tel:+380937452557">Тел: +380937452557</a>
-          </li>
+          <li className="dad"><a href="/#case" className="linked" onClick={(e) => { toggleDropdown(); handleSmoothScroll(e, '/#case'); }}>Кейси</a></li>
+          <li className="dad"><a href="/#contacts" className="linked" onClick={(e) => { toggleDropdown(); handleSmoothScroll(e, '/#contacts'); }}>Контакти</a></li>
+          <li className="dad"><a className="phonebutton" href="tel:+380937452557">Тел: +380937452557</a></li>
           <li className="dad">
             <a className='socials-dropdown' href='viber://chat?number=%2B380937452557' target="_blank" rel="noopener noreferrer"
               onClick={(e) => {

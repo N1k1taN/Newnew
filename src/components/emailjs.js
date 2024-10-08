@@ -2,6 +2,7 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
+import { motion } from 'framer-motion';
 
 function ContactForm({ handleBackgroundClick, callPageRef }) {
   const [phoneNumber, setPhoneNumber] = useState(''); // State to store phone number
@@ -59,11 +60,18 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
   return (
     <div
       className="backgroundpage"
-      style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 999 , }}
+      style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 999 }}
       onClick={handleBackgroundClick} // Обработчик для закрытия фона по клику
     >
       <div className="exitcall"><img src="icons/plus-solid.svg" alt="close"></img></div>
-      <div className="callpage" ref={callPageRef} onClick={(e) => e.stopPropagation()}> {/* Прекращаем всплытие клика */}
+      <motion.div
+        className="callpage"
+        ref={callPageRef}
+        onClick={(e) => e.stopPropagation()} // Прекращаем всплытие клика
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+      >
         {formSubmitted ? (
           <h2 className="thx">Дякую вам, ми передзвонимо!</h2>
         ) : (
@@ -96,7 +104,7 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
             </button>
           </form>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 }
