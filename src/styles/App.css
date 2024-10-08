@@ -305,7 +305,7 @@ margin-bottom: 20px;
       align-items: center;
       justify-content: space-around;
       position: relative;
-      top: 10%;
+      top: 2%;
   }
   .callpage>form>div>input{
     font-size: 36px;
@@ -989,7 +989,7 @@ width: 100%;
     .callpage{
       height: 650px;
       width: 100%;
-      top:4%;
+      top:0%;
     }
     
 
@@ -1188,6 +1188,13 @@ font-size: 30px;
       }
       .documents>h2{
         font-size: 30;
+      }
+      .exitcall{
+        height: 80px;
+        background-color: white;
+      }
+      .exitcall>img{
+        height: 80px;
       }
       .callpage{
         border-radius: 0px;
