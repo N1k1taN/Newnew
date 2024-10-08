@@ -11,6 +11,8 @@ import classNames from 'classnames';
 import Head from 'next/head';
 import Image from 'next/image';
 import { CaseResults,Comments } from '@/components/sliders';
+import Steps from '@/components/steps';
+import PanelRech from '@/components/ownerb';
 
 
 function Homepage() {
@@ -48,39 +50,7 @@ function Homepage() {
           <h2>ПРОФЕСІЙНО НАДАЄМО ПОСЛУГИ:</h2>
           <Accordions />
         </div>
-        <div className="steps">
-        <h2>Як ми працюємо</h2>
-          <div className="step">
-            <div className="stuns">
-              1
-            </div>
-            <div className="steptext">Увійдемо на будь-якому етапі справи.</div>
-          </div>
-          <div className="step">
-            <div className="stuns">
-              2
-            </div>
-            <div className="steptext">Обговоримо справу з Вами, проаналізуємо перспективи та ризики</div>
-          </div>
-          <div className="step">
-            <div className="stuns">
-              3
-            </div>
-            <div className="steptext">Досконально вивчимо суть Вашої ситуації, врахуємо всі наявні обставини</div>
-          </div>
-          <div className="step">
-            <div className="stuns">
-              4
-            </div>
-            <div className="steptext">Надамо стратегію, запропонуємо шляхи вирішення справи та план дій</div>
-          </div>
-          <div className="step">
-            <div className="stuns">
-              5
-            </div>
-            <div className="steptext">Здійснюємо правовий захист та відстоювання Ваших інтересів.</div>
-          </div>
-        </div>
+      <Steps></Steps> 
         <div className="consulting" id="about">
           <h3 className="bods">
             <Image
@@ -91,17 +61,8 @@ function Homepage() {
               layout="responsive" // делает изображение адаптивным
             />
           </h3>
-          <div className="panelrech">
-<div className='textbys'>
-  <div className="ACDS">
-  <h3>Кожен наш клієнт для нас є побратимом на юридичному фронті, за якого ми будемо битись до кінця не цураючись застосовувати різноманітні методи правової боротьби.</h3>
-  <p>Ярослав Науменко</p>
-  <p>Засновник NLAW Company</p>
-  </div>
-</div>
-            <div className='Ownerb'></div>
-          </div>
-        </div>
+     </div>
+     <PanelRech></PanelRech>
 <CaseResults></CaseResults>
 <Comments></Comments>
       </div>

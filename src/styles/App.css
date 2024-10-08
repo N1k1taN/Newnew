@@ -728,7 +728,7 @@ box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75)
   background-image: url(/icons/owner.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: right;
+  background-position: center;
 }
 .textbys{
   display: flex;
@@ -745,6 +745,8 @@ box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75)
 }
 .ACDS::before{
   content: '“';
+  position: relative;
+  top: 10%;
   font-size: 50px;
 }
 .ACDS>p{font-size: 15px;}
@@ -752,6 +754,7 @@ box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75)
   padding-top: 30px;
 }
 .ACDS>h3{
+text-align: start;
   font-size: 40px;
 }
 .panelrech{
@@ -866,6 +869,10 @@ margin-bottom: 30px;
 }
 @media all and (max-width:1450px)
 {
+  .textbys{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
   .panelrech{
     flex-direction: column-reverse;
   }
@@ -965,6 +972,12 @@ width: 100%;
   @media all and (max-width:600px){
     .emailpng{
       height: 300px;
+    }
+    h2{
+      line-height: 0.9
+    }
+    .ACDS>h3{
+      font-size: 25px;
     }
     .Ownerb{
       background-position:  top;
