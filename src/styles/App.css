@@ -1055,7 +1055,9 @@ font-size: 16px;    }
 
   
   @media all and (max-width:500px){
-
+.Ownerb{
+  background-size: cover;
+}
     .info{
       width: 90%;
     }
@@ -1180,8 +1182,9 @@ font-size: 30px;
         top: 9%;
       }
       .AccordionTrigger>div{
-        padding-top: 10%;
-        padding-bottom: 10%;
+        padding-top: 4%;
+        padding-bottom: 4%;
+        padding-left: 2%;
       }
       .documents>h2{
         font-size: 30;

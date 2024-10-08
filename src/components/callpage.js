@@ -17,7 +17,7 @@ const OpenMenuButton = () => {
     // Set a 20-second timer to open the form automatically
     timerRef.current = setTimeout(() => {
       setIsMenuOpen(true);
-    }, 10000);
+    }, 15000);
 
     return () => clearTimeout(timerRef.current);
   }, []);
