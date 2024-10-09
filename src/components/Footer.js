@@ -65,6 +65,7 @@ return<div className="footer">
 <div className="allrights">
   <p>© Усі права захищено.</p>
   <p>2024</p>
+  <p>Код ЄДРПОУ:45432286</p>
 </div>
 </div>
 }

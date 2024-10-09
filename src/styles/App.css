@@ -726,7 +726,6 @@ z-index: 90;}
 box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75)
 }
 .Ownerb{
-  object-fit: cover;
   width: 40%;
   background-image: url(/icons/owner.webp);
   background-repeat: no-repeat;
