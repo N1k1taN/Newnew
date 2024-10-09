@@ -86,10 +86,11 @@ const Dropdown = () => {
       {isDropdownOpen && (
         <motion.ul
           className="dropdown-menu"
-          initial={{ height: 0, opacity: 0 }}
-          animate={{ height: "auto", opacity: 1 }}
+          initial={{ scaleY: 0, opacity: 0 }}
+          animate={{ scaleY: 1, opacity: 1 }}
+          exit={{ scaleY: 0, opacity: 0 }}
           transition={{ duration: 0.4 }}
-          style={{ maxHeight: window.innerHeight < 450 ? '300px' : 'none', overflowY: 'auto' }} // Add scroll to the dropdown-menu
+          style={{ transformOrigin: 'top', maxHeight: window.innerHeight < 450 ? '300px' : 'none', overflowY: 'auto' }} // Add scroll to the dropdown-menu
         >
           <li className="dad"><a href="/#help" className="linked" onClick={(e) => { handleSmoothScroll(e, '/#help'); }}>Послуги</a></li>
           <li className="dad"><a href="/#vidguk" className="linked" onClick={(e) => { handleSmoothScroll(e, '/#vidguk'); }}>Відгуки</a></li>
