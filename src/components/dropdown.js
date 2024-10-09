@@ -79,7 +79,7 @@ const Dropdown = () => {
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           transition={{ duration: 0.4 }}
-          style={{ overflow: 'hidden' }}
+          style={{ maxHeight: window.innerHeight < 600 ? '300px' : 'none', overflowY: window.innerHeight < 450 ? 'auto' : 'visible' }} // Add conditional scroll to the dropdown-menu based on screen height
         >
           <li className="dad"><a href="/#help" className="linked" onClick={(e) => { toggleDropdown(); handleSmoothScroll(e, '/#help'); }}>Послуги</a></li>
           <li className="dad"><a href="/#vidguk" className="linked" onClick={(e) => { toggleDropdown(); handleSmoothScroll(e, '/#vidguk'); }}>Відгуки</a></li>
