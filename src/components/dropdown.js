@@ -44,6 +44,14 @@ const Dropdown = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (window.innerHeight < 450 && isDropdownOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+  }, [isDropdownOpen]);
+
   const toggleDropdown = () => {
     setIsDropdownOpen((prev) => !prev);
   };
@@ -79,7 +87,7 @@ const Dropdown = () => {
           initial={{ height: 0, opacity: 0 }}
           animate={{ height: "auto", opacity: 1 }}
           transition={{ duration: 0.4 }}
-          style={{ maxHeight: window.innerHeight < 600 ? '300px' : 'none', overflowY: window.innerHeight < 450 ? 'auto' : 'visible' }} // Add conditional scroll to the dropdown-menu based on screen height
+          style={{ maxHeight: window.innerHeight < 450 ? '300px' : 'none', overflowY: 'auto' }} // Add scroll to the dropdown-menu
         >
           <li className="dad"><a href="/#help" className="linked" onClick={(e) => { toggleDropdown(); handleSmoothScroll(e, '/#help'); }}>Послуги</a></li>
           <li className="dad"><a href="/#vidguk" className="linked" onClick={(e) => { toggleDropdown(); handleSmoothScroll(e, '/#vidguk'); }}>Відгуки</a></li>
