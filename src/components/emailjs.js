@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
+import { disableBodyScroll, enableBodyScroll } from 'body-scroll-lock';
 
 function ContactForm({ handleBackgroundClick, callPageRef }) {
   const [phoneNumber, setPhoneNumber] = useState(''); // State to store phone number
@@ -13,12 +14,16 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
 
   useEffect(() => {
     // Block scrolling when popup is open
-    document.body.style.overflow = 'hidden';
+    if (callPageRef.current) {
+      disableBodyScroll(callPageRef.current);
+    }
     return () => {
       // Re-enable scrolling when popup is closed
-      document.body.style.overflow = 'auto';
+      if (callPageRef.current) {
+        enableBodyScroll(callPageRef.current);
+      }
     };
-  }, []);
+  }, [callPageRef]);
 
   const sendEmail = (e) => {
     e.preventDefault();
