@@ -12,6 +12,9 @@ const roboto = Roboto({
 export default function RootLayout({ children }) {
   return (
     <html lang="ua">
+            <head>
+        <link rel="icon" href="/favicon.ico" />
+      </head>
       <body className={roboto.className}>
         <Navbar />
         <main>{children}</main>

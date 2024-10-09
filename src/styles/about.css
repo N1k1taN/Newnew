@@ -69,13 +69,14 @@ width: 50%;
 .breezetext>p{
     
     font-size: 21px;
-padding: 30px;
+padding: 15px;
 }
-h3{
+.Titles{
     padding-top: 30px;
     text-align: center;
     font-size: 40px;
     font-weight: 800;
+    padding-bottom: 30px;
 }
 
 .numbrdeals{

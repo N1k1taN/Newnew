@@ -111,7 +111,7 @@ const Comments = () => {
             <div className="swiper-zoom-container">
               <img
                 src={slide.imgSrc}
-                alt={slide.text}
+                alt="Відгуки"
                 className={activeIndex === index ? 'active-slide' : 'blur-slide'}
                 width={350}
                 height={550}

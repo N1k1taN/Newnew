@@ -39,7 +39,7 @@ const Accordions = () => {
               onClick={() => handleLinkClick('/vidstrochka')}
               style={{ cursor: 'pointer' }}
             >
-              ВІДСТРОЧКА ВІД ПРИЗОВУ НА ВІЙСКОВУ СЛУЖБУ ПІД ЧАС МОБІЛЗАЦІЇ
+              ВІДСТРОЧКА ВІД ПРИЗОВУ НА ВІЙСЬКОВУ СЛУЖБУ ПІД ЧАС МОБІЛІЗАЦІЇ
             </div>
           </AccordionTrigger>
           <AccordionContent>

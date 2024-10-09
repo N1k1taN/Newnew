@@ -54,7 +54,7 @@ const Dropdown = () => {
     const element = document.getElementById(targetId);
     if (element) {
       window.scrollTo({
-        top: element.offsetTop - 70,
+        top: element.offsetTop - 85,
         behavior: "smooth",
       });
     } else {

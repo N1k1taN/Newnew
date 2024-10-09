@@ -1,16 +1,12 @@
-"use client";
 import React from "react";
 import "../../styles/App.css"
 import "../../styles/about.css";
 import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
-import { useEffect } from "react";
 import Image from "next/image";
 
 function Groshovezabez() {
-  useEffect(() => {
-    document.title = "Грошовове забезспечення";
-  })
+
   return (
     <div>
 <Callpg></Callpg>

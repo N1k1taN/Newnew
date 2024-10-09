@@ -91,7 +91,9 @@ top: 5%;
       background-repeat: no-repeat;
       background-position: 0px 15%;
       width: 100%;
-      height: 100vh;
+      padding-top: 100px;
+      padding-bottom: 150px;
+  
       max-height: 1080px;}
   .logoname{
       display: flex;
@@ -118,12 +120,12 @@ top: 5%;
       align-content: center;
   }
   
-  h1{color: rgb(255, 255, 255);font-size: 90px; margin-bottom: 5px;  text-align: center;
+  h1{color: rgb(255, 255, 255);font-size: 90px; padding-bottom: 20px;  text-align: center; padding-top: 30px;
 text-shadow: 1px 2px black;
 }
-  .info>h2:nth-child(2){color: white;font-size: 50px; width: 100%; text-align: center;text-shadow: 1px 2px black;padding-left: 10px;
+  .info>h2:nth-child(2){color: white;font-size: 50px; width: 100%; text-align: center;text-shadow: 1px 2px black;padding-left: 10px; padding-bottom: 20px;
   }
-  .info>h2:nth-child(3){color: white; font-size: 50px; text-align: center;text-shadow: 1px 2px black;margin-top: 25px;
+  .info>h2:nth-child(3){color: white; font-size: 50px; text-align: center;text-shadow: 1px 2px black;padding-bottom: 50px;
  }
   .info>h2{margin: 5px; width: 75%;}
   .main{
@@ -204,7 +206,7 @@ height: 27px;
       flex-direction: column;
       align-content: space-around;
       align-items: center;
-      scroll-margin-top: 200px;
+      scroll-margin-top: 110px;
   }
   .help>h2{
     font-size: 40px;
@@ -451,7 +453,7 @@ margin-bottom: 20px;
         padding: 0;
         display: block;
         position: fixed;
-        top: 7.4%;
+        margin-top: -1px;
         z-index: 1;
         left: 0;
         color: white;
@@ -748,7 +750,7 @@ box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75)
 .ACDS::before{
   content: '“';
   position: relative;
-  top: 10%;
+  top: 6%;
   font-size: 50px;
 }
 .ACDS>p{font-size: 15px;}
@@ -824,7 +826,10 @@ padding: 10px 15px 10px 15px;
 }
 
 #vidguk{
-  scroll-margin-top: 90px;
+  scroll-margin-top: 120px;
+}
+#case{
+  scroll-margin-top: 120px;
 }
 .Comments{
   padding-bottom: 25px;
@@ -923,6 +928,13 @@ background-position: 0;
 padding-right: 10px}
       .doc{
       width: 90%;
+      }
+      .exitcall{
+        background-color: white;
+        height: 50px;
+      }
+      .emailpng{
+        height: 300px;
       }
       .doico{
           height: 4vh;
@@ -1096,6 +1108,7 @@ font-size: 16px;    }
        background-position: 35%;
     }
     .mainpage{
+      padding-bottom: 100px;
         background-size: 440%;
         background-position-y: 20%;
     }
@@ -1176,10 +1189,7 @@ font-size: 30px;
   }
 
   @media all and (max-width:400px){
-    .dropdown-menu {
 
-        top: 9%;
-      }
       .AccordionTrigger>div{
         padding-top: 4%;
         padding-bottom: 4%;
@@ -1190,7 +1200,6 @@ font-size: 30px;
       }
       .exitcall{
         height: 80px;
-        background-color: white;
       }
       .exitcall>img{
         height: 80px;

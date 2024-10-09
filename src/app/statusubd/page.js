@@ -1,17 +1,13 @@
-"use client";
 import React from "react";
 import "../../styles/App.css"
 import "../../styles/about.css";
 import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
-import { useEffect } from "react";
 import Image from "next/image";
 
 
 function Statusubd() {
-  useEffect(() => {
-    document.title = "Статус УБД";
-  })
+
   return (
     <div>
 <Callpg></Callpg>

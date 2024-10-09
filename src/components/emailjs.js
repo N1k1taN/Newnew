@@ -71,6 +71,10 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
+        style={{
+          maxHeight: '90vh', // Ограничение высоты popup
+          overflowY: 'auto', // Включение прокрутки по вертикали, если содержимое превышает высоту окна
+        }}
       >
         {formSubmitted ? (
           <h2 className="thx">Дякую вам, ми передзвонимо!</h2>

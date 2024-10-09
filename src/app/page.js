@@ -8,32 +8,38 @@ import '../styles/App.css';
 import OpenMenuButton from "../components/callpage";
 import Callpg from '../components/callpg';
 import classNames from 'classnames';
-import Head from 'next/head';
 import Image from 'next/image';
 import { CaseResults,Comments } from '@/components/sliders';
 import Steps from '@/components/steps';
 import PanelRech from '@/components/ownerb';
+import Head from 'next/head';
 
-
+export const metadata = {
+  title: 'NLAW Company - Військовий адвокат в Україні',
+  description: 'NLAW Company надає юридичну допомогу у питаннях військового права по всій Україні. Оскарження рішень, відстрочка від мобілізації, звільнення з військової служби та інші послуги.',
+  icons: {
+    icon: '/favicon.ico',
+  },
+};
 function Homepage() {
 
   return (
     <div>
-<Head>
-  <title>Військовий Адвокат - Юридична Допомога у Вирішенні Питань з Військового Права</title>
-  <meta name="description" content="Військовий адвокат NLAW Company надає професійну юридичну допомогу по всій Україні. Вирішення питань з мобілізації, військової служби, оскарження рішень та інші юридичні послуги." />
-  <meta name="keywords" content="військовий адвокат, юридична допомога військовослужбовцям, відстрочка від мобілізації, NLAW Company, оскарження рішень, юридична підтримка, звільнення з військової служби" />
-  <meta name="robots" content="index, follow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="Військовий Адвокат - Юридична Допомога у Вирішенні Питань з Військового Права" />
-  <meta property="og:description" content="Юридична допомога військовослужбовцям по всій Україні. Відстрочка від мобілізації, звільнення з військової служби, оскарження рішень та інші послуги." />
-  <meta property="og:image" content="/icons/logo.png" />
-  <meta property="og:url" content="https://вашсайт.com" />
-  <link rel="icon" href="/favicon.ico" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-</Head>
+      <Head>
+        <title>Військовий Адвокат - Юридична Допомога у Вирішенні Питань з Військового Права</title>
+        <meta name="description" content="NLAW Company надає професійну юридичну допомогу військовослужбовцям по всій Україні. Відстрочка від мобілізації, оскарження рішень, звільнення з військової служби та інші послуги." />
+        <meta name="keywords" content="військовий адвокат, юридична допомога, відстрочка від мобілізації, оскарження рішень, NLAW Company, військове право, звільнення з військової служби" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta property="og:title" content="Військовий Адвокат - Юридична Допомога у Вирішенні Питань з Військового Права" />
+        <meta property="og:description" content="Юридична допомога військовослужбовцям по всій Україні: відстрочка від мобілізації, звільнення з військової служби, оскарження рішень." />
+        <meta property="og:image" content="/icons/logo.png" />
+        <meta property="og:url" content="https://вашсайт.com" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+      </Head>
 
       <Callpg />
       <div className="mainpage" id="home">
