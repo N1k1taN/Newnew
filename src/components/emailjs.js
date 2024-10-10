@@ -80,7 +80,7 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
           <h2 className="thx">Дякую вам, ми передзвонимо!</h2>
         ) : (
           <form ref={form} onSubmit={sendEmail}>
-            <img className="emailpng" src="/icons/callpg.jpg" alt="call" />
+            <img className="emailpng" src="/icons/callpg.webp" alt="call" />
             <h2>Вже на варті захисту Ваших прав!</h2>
             <p>Залишайте свій номер телефону і ми зателефонуємо Вам на протязі 20 хвилин.</p>
             <p>Якщо пізніше, Ви отримаєте знижку 10%</p>

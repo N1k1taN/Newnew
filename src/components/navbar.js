@@ -23,7 +23,7 @@ const Navbar = () => {
     <div className="navbar">
       <Link href="/#home" className="logoname">
         <Image
-          src="/icons/logo.png"
+          src="/icons/logo.webp"
           alt="logo"
           width={350}
           height={550}

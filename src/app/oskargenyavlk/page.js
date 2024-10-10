@@ -4,6 +4,32 @@ import "../../styles/about.css";
 import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
 import Image from "next/image";
+export const metadata = {
+  title: "Військовий Адвокат - Оскарження Рішення ВЛК | Юридична Допомога",
+  description: "NLAW Company надає допомогу у оскарженні рішень військово-лікарської комісії (ВЛК). Консультації, юридичний супровід, підтримка військових.",
+  keywords: "військовий адвокат, оскарження рішення ВЛК, юридична допомога, військове право, NLAW Company, військово-лікарська комісія",
+  robots: "index, follow",
+  openGraph: {
+    title: "Військовий Адвокат - Оскарження Рішення ВЛК | Юридична Допомога",
+    description: "Юридична допомога військовослужбовцям у оскарженні рішень військово-лікарської комісії. Професійний супровід та консультації.",
+    images: [
+      {
+        url: "/icons/vislav.webp",
+        width: 500,
+        height: 300,
+        alt: "Оскарження рішення ВЛК"
+      }
+    ],
+    type: "website",
+    url: "https://nlawcompany.com/oskargenyavlk"
+  },
+  icons: {
+    icon: "/favicon.ico",
+    appleTouchIcon: "/apple-touch-icon.png",
+    icon16: "/favicon-16x16.png",
+    icon32: "/favicon-32x32.png"
+  }
+};
 
 function Oskargenyavlk() {
 

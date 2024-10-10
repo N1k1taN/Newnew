@@ -5,6 +5,35 @@ import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Військовий Адвокат - Відстрочка від Мобілізації | Юридична Допомога",
+  description: "NLAW Company надає професійну юридичну допомогу військовослужбовцям по всій Україні. Відстрочка від мобілізації, оскарження рішень, звільнення з військової служби та інші послуги.",
+  keywords: "військовий адвокат, юридична допомога, відстрочка від мобілізації, оскарження рішень, NLAW Company, військове право, звільнення з військової служби",
+  robots: "index, follow",
+  openGraph: {
+    title: "Військовий Адвокат - Відстрочка від Мобілізації | Юридична Допомога",
+    description: "Юридична допомога військовослужбовцям по всій Україні: відстрочка від мобілізації, звільнення з військової служби, оскарження рішень.",
+    images: [
+      {
+        url: "/icons/logo.png",
+        width: 500,
+        height: 300,
+        alt: "Військовий Адвокат"
+      }
+    ],
+    type: "website",
+    url: "https://nlawcompany.com"
+  },
+  icons: {
+    icon: "/favicon.ico",
+    appleTouchIcon: "/apple-touch-icon.png",
+    icon16: "/favicon-16x16.png",
+    icon32: "/favicon-32x32.png"
+  }
+};
+
+
+
 function Vidstrochka() {
 
   return (

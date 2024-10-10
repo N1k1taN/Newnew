@@ -1,11 +1,35 @@
-"use client";
 import React from "react";
 import "../../styles/App.css"
 import "../../styles/about.css";
 import classNames from "classnames";
 
 
-
+export const metadata = {
+  title: "NLAW Company - Про Нас | Юридична Допомога Військовослужбовцям",
+  description: "Дізнайтеся більше про NLAW Company, юридичну компанію, засновану в Україні, яка надає допомогу військовослужбовцям та іншим клієнтам. Ми не боїмося братися за складні справи та пропонуємо альтернативні рішення.",
+  keywords: "NLAW Company, юридична компанія, правова допомога, військовий адвокат, Ярослав Науменко, юридичний фронт, правовий захист",
+  robots: "index, follow",
+  openGraph: {
+    title: "NLAW Company - Про Нас | Юридична Допомога Військовослужбовцям",
+    description: "Юридична компанія NLAW Company допомагає клієнтам вирішувати юридичні питання з максимальною вигодою. Дізнайтеся більше про нашу місію та команду.",
+    images: [
+      {
+        url: "/icons/company-logo.webp",
+        width: 500,
+        height: 300,
+        alt: "NLAW Company"
+      }
+    ],
+    type: "website",
+    url: "https://nlawcompany.com/onas"
+  },
+  icons: {
+    icon: "/favicon.ico",
+    appleTouchIcon: "/apple-touch-icon.png",
+    icon16: "/favicon-16x16.png",
+    icon32: "/favicon-32x32.png"
+  }
+};
 function Onastext() {
 
   return (

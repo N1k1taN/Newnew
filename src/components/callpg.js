@@ -11,7 +11,7 @@ const Callpg = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 600);
+      setIsMobile(window.innerWidth < 1050);
     };
 
     handleResize(); 

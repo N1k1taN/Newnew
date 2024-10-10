@@ -5,6 +5,34 @@ import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Військовий Адвокат - Грошове Забезпечення та Додаткова Винагорода | Юридична Допомога",
+  description: "NLAW Company надає допомогу військовослужбовцям у питаннях грошового забезпечення та додаткової винагороди. Консультації, юридичний супровід та вирішення питань, навіть у досудовому порядку.",
+  keywords: "військовий адвокат, грошове забезпечення, додаткова винагорода, юридична допомога, військове право, NLAW Company",
+  robots: "index, follow",
+  openGraph: {
+    title: "Військовий Адвокат - Грошове Забезпечення та Додаткова Винагорода | Юридична Допомога",
+    description: "Юридична допомога військовослужбовцям щодо грошового забезпечення та додаткових виплат. Професійний супровід та консультації для вирішення фінансових питань.",
+    images: [
+      {
+        url: "/icons/grosh.webp",
+        width: 500,
+        height: 300,
+        alt: "Грошове забезпечення"
+      }
+    ],
+    type: "website",
+    url: "https://nlawcompany.com/groshovezabez"
+  },
+  icons: {
+    icon: "/favicon.ico",
+    appleTouchIcon: "/apple-touch-icon.png",
+    icon16: "/favicon-16x16.png",
+    icon32: "/favicon-32x32.png"
+  }
+};
+
+
 function Groshovezabez() {
 
   return (

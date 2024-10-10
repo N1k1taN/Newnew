@@ -6,6 +6,33 @@ import Callpg from "../../components/callpg";
 import Image from "next/image";
 
 
+export const metadata = {
+  title: "Військовий Адвокат - Отримання Статусу УБД | Юридична Допомога",
+  description: "NLAW Company допомагає військовослужбовцям отримати статус учасника бойових дій (УБД). Консультації, юридичний супровід та допомога в отриманні соціальних пільг.",
+  keywords: "військовий адвокат, юридична допомога, статус УБД, учасник бойових дій, NLAW Company, соціальні пільги, військове право",
+  robots: "index, follow",
+  openGraph: {
+    title: "Військовий Адвокат - Отримання Статусу УБД | Юридична Допомога",
+    description: "Отримання статусу учасника бойових дій для військовослужбовців. Юридичний супровід та консультації щодо соціальних пільг для учасників бойових дій.",
+    images: [
+      {
+        url: "/icons/ubd.webp",
+        width: 500,
+        height: 300,
+        alt: "Статус УБД"
+      }
+    ],
+    type: "website",
+    url: "https://nlawcompany.com/statusubd"
+  },
+  icons: {
+    icon: "/favicon.ico",
+    appleTouchIcon: "/apple-touch-icon.png",
+    icon16: "/favicon-16x16.png",
+    icon32: "/favicon-32x32.png"
+  }
+};
+
 function Statusubd() {
 
   return (
