@@ -163,12 +163,13 @@ padding: 20px;
     .onasblock>.Ownerb{
         order: -1;
     }
-}
-
-@media all and (max-width:700px){
     .about{
         width: 100%;
     }
+}
+
+@media all and (max-width:700px){
+
     .practice>div{
         font-weight: 700;
         font-size: 24px;
