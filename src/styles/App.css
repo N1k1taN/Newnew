@@ -14,7 +14,7 @@ html{
     font-weight: normal; 
     font-style: normal;  
   }
-  
+
   .butcall{
     background-color: white;
     border: none;
@@ -121,11 +121,11 @@ top: 5%;
   }
   
   h1{color: rgb(255, 255, 255);font-size: 90px; padding-bottom: 20px;  text-align: center; padding-top: 30px;
-text-shadow: 1px 2px black;
+text-shadow: 2px 2px black;
 }
-  .info>h2:nth-child(2){color: white;font-size: 50px; width: 100%; text-align: center;text-shadow: 1px 2px black;padding-left: 10px; padding-bottom: 20px;
+  .info>h2:nth-child(2){color: white;font-size: 50px; width: 100%; text-align: center;text-shadow: 2px 2px black;padding-left: 10px; padding-bottom: 20px;
   }
-  .info>h2:nth-child(3){color: white; font-size: 50px; text-align: center;text-shadow: 1px 2px black;padding-bottom: 50px;
+  .info>h2:nth-child(3){color: white; font-size: 50px; text-align: center;text-shadow: 2px 2px black;padding-bottom: 50px;
  }
   .info>h2{margin: 5px; width: 75%;}
   .main{
@@ -790,7 +790,7 @@ text-align: start;
   align-items: flex-start;
 }
 .steps>h2{
-padding-top: 30px;
+padding-top: 20px;
 padding-bottom: 20px;
   font-size: 40px;
 }
@@ -841,13 +841,46 @@ padding: 10px 15px 10px 15px;
 .thx{
   vertical-align: center;
   font-size: 30px;
-  width: 250px;
+  padding: 40px;
   text-align: center;
+}
+.thx>p:nth-child(1){
+  font-size: 30px;
+font-weight: 700;
+}
+.thx>p:nth-child(2){
+  font-size: 19px;
+}
+.thx>button{
+  font-weight: 700;
+  margin-top: 30px;
+  font-size: 20px;
+  padding: 12px 20px;
+  background-color: rgba(255, 204, 0, 1);
+  border-radius: 14px;
+  transition: all 0.4s ease-in;
+  cursor: pointer;
+}
+.thx>button:hover{
+  background-color: rgba(255, 204, 0, 0.85);
+  color: white;
+}
+.linked{
+  -webkit-transition: all 0.3s;
+}
+.linked:hover{
+  color: rgba(255, 204, 0, 0.85);
 }
 .accorn{
   width: 100%;
   display: flex;
   justify-content: center;
+}
+.AccordionContent[data-state="open"] {
+	animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+.AccordionContent[data-state="closed"] {
+	animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
 }
 .senderbutt2{
   background-color: #4b5320;
@@ -877,6 +910,12 @@ margin-bottom: 30px;
   padding-left: 1.5%;
   width: 70%;
 }
+.giv>div>a{
+text-decoration: none;
+color: white;}
+
+
+
 @media all and (max-width:1450px)
 {
   .textbys{
@@ -1029,6 +1068,9 @@ font-size: 16px;    }
     .callpage>form>div{
       margin-bottom: none;
 
+    }
+    .giv>div>a{
+      font-size: 12px;
     }
       .mainpage{
         font-size: 25px;

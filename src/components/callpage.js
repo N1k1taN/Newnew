@@ -23,11 +23,12 @@ const OpenMenuButton = () => {
   }, []);
 
   const handleBackgroundClick = (event) => {
+    if (!event || !event.target) return;
     if (callPageRef.current && !callPageRef.current.contains(event.target)) {
       setIsMenuOpen(false);
-    } else {
     }
   };
+  
 
   return (
     <div>

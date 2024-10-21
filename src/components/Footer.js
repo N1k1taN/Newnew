@@ -21,8 +21,8 @@ return<div className="footer">
     <div className="giv">
       <div>
         <p>ТЕЛЕФОН</p>
-        <p>+380937452557</p>
-      </div>
+        <a href="tel:+380937452557">+380937452557</a>
+        </div>
       <div>
         <p>EMAIL</p>
         <p>NLAWCOMPANY@GMAIL.COM</p>

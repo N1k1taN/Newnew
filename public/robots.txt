@@ -1,3 +1,17 @@
-# https://www.robotstxt.org/robotstxt.html
+# *
 User-agent: *
-Disallow:
+Allow: /
+
+# AhrefsBot
+User-agent: AhrefsBot
+Disallow: /
+
+# MJ12bot
+User-agent: MJ12bot
+Disallow: /
+
+# Host
+Host: https://nlawcompany.com
+
+# Sitemaps
+Sitemap: https://nlawcompany.com/sitemap.xml

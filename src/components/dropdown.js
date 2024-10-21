@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const Dropdown = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -83,49 +83,51 @@ const Dropdown = () => {
         {isDropdownOpen ? '' : ''}
       </button>
 
-      {isDropdownOpen && (
-        <motion.ul
-          className="dropdown-menu"
-          initial={{ scaleY: 0, opacity: 0 }}
-          animate={{ scaleY: 1, opacity: 1 }}
-          exit={{ scaleY: 0, opacity: 0 }}
-          transition={{ duration: 0.4 }}
-          style={{ transformOrigin: 'top', maxHeight: window.innerHeight < 450 ? '300px' : 'none', overflowY: 'auto' }} // Add scroll to the dropdown-menu
-        >
-          <li className="dad"><a href="/#help" className="linked" onClick={(e) => { handleSmoothScroll(e, '/#help'); }}>Послуги</a></li>
-          <li className="dad"><a href="/#vidguk" className="linked" onClick={(e) => { handleSmoothScroll(e, '/#vidguk'); }}>Відгуки</a></li>
-          <li className="dad"><Link href="/onas" className="linked" onClick={toggleDropdown}>Про нас</Link></li>
-          <li className="dad"><a href="/#case" className="linked" onClick={(e) => { handleSmoothScroll(e, '/#case'); }}>Кейси</a></li>
-          <li className="dad"><a href="/#contacts" className="linked" onClick={(e) => { handleSmoothScroll(e, '/#contacts'); }}>Контакти</a></li>
-          <li className="dad"><a className="phonebutton" href="tel:+380937452557">Тел: +380937452557</a></li>
-          <li className="dad">
-            <a className='socials-dropdown' href='viber://chat?number=%2B380937452557' target="_blank" rel="noopener noreferrer"
-              onClick={(e) => {
-                const userAgent = navigator.userAgent.toLowerCase();
-                if (userAgent.includes('android')) {
-                  e.preventDefault();
-                  window.location.href = "intent://chat?number=%2B380937452557#Intent;scheme=viber;package=com.viber.voip;end";
-                } else if (userAgent.includes('ios')) {
-                  window.location.href = "https://apps.apple.com/app/id382617920";
-                } else {
-                  window.location.href = "https://www.viber.com/";
-                }
-              }}
-            >
-              <img src="/icons/messengers/Viber_icon_white.svg" alt="Viber" />
-            </a>
-            <a className='socials-dropdown' href='https://signal.me/#eu/F8axajmr2fkdM4fu5Vl8yFJwj1W31Us0SMwc0h0axGvNA8Svn0NL-JkxLsnJBnCC' target="_blank" rel="noopener noreferrer">
-              <img src="/icons/messengers/Signal-Logo-Ultramarine.svg" alt="Signal" />
-            </a>
-            <a className='socials-dropdown' href='https://t.me/Nlaw_company' target="_blank" rel="noopener noreferrer">
-              <img src='/icons/messengers/teleg.svg' alt="Telegram" />
-            </a>
-            <a className='socials-dropdown' href='https://wa.me/message/X3PEXBN6BKQHF1' target="_blank" rel="noopener noreferrer">
-              <img src="/icons/messengers/Digital_Glyph_White.svg" alt="WhatsApp" />
-            </a>
-          </li>
-        </motion.ul>
-      )}
+      <AnimatePresence>
+        {isDropdownOpen && (
+          <motion.ul
+            className="dropdown-menu"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.4 }}
+            style={{ overflow: 'hidden', maxHeight: window.innerHeight < 450 ? '300px' : 'none' }} // Add scroll to the dropdown-menu
+          >
+            <li className="dad"><a href="/#help" className="linked" onClick={(e) => { handleSmoothScroll(e, '/#help'); }}>Послуги</a></li>
+            <li className="dad"><a href="/#vidguk" className="linked" onClick={(e) => { handleSmoothScroll(e, '/#vidguk'); }}>Відгуки</a></li>
+            <li className="dad"><Link href="/onas" className="linked" onClick={toggleDropdown}>Про нас</Link></li>
+            <li className="dad"><a href="/#case" className="linked" onClick={(e) => { handleSmoothScroll(e, '/#case'); }}>Кейси</a></li>
+            <li className="dad"><a href="/#contacts" className="linked" onClick={(e) => { handleSmoothScroll(e, '/#contacts'); }}>Контакти</a></li>
+            <li className="dad"><a className="phonebutton" href="tel:+380937452557">Тел: +380937452557</a></li>
+            <li className="dad">
+              <a className='socials-dropdown' href='viber://chat?number=%2B380937452557' target="_blank" rel="noopener noreferrer"
+                onClick={(e) => {
+                  const userAgent = navigator.userAgent.toLowerCase();
+                  if (userAgent.includes('android')) {
+                    e.preventDefault();
+                    window.location.href = "intent://chat?number=%2B380937452557#Intent;scheme=viber;package=com.viber.voip;end";
+                  } else if (userAgent.includes('ios')) {
+                    window.location.href = "https://apps.apple.com/app/id382617920";
+                  } else {
+                    window.location.href = "https://www.viber.com/";
+                  }
+                }}
+              >
+                <img src="/icons/messengers/Viber_icon_white.svg" alt="Viber" />
+              </a>
+              <a className='socials-dropdown' href='https://signal.me/#eu/F8axajmr2fkdM4fu5Vl8yFJwj1W31Us0SMwc0h0axGvNA8Svn0NL-JkxLsnJBnCC' target="_blank" rel="noopener noreferrer">
+                <img src="/icons/messengers/Signal-Logo-Ultramarine.svg" alt="Signal" />
+              </a>
+              <a className='socials-dropdown' href='https://t.me/Nlaw_company' target="_blank" rel="noopener noreferrer">
+                <img src='/icons/messengers/teleg.svg' alt="Telegram" />
+              </a>
+              <a className='socials-dropdown' href='https://wa.me/message/X3PEXBN6BKQHF1' target="_blank" rel="noopener noreferrer">
+                <img src="/icons/messengers/Digital_Glyph_White.svg" alt="WhatsApp" />
+              </a>
+            </li>
+          </motion.ul>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

@@ -19,4 +19,15 @@ module.exports = {
           },
         ],
       },
+      additionalPaths: async (config) => {
+        return [
+          await config.transform(config, '/groshovezabez'), 
+          await config.transform(config, '/onas'), 
+          await config.transform(config, '/oskargenyavlk'),
+          await config.transform(config, '/oskargenyavlk'), 
+          await config.transform(config, '/vidstrochka'),
+          await config.transform(config, '/zvilnenyasviskovoi')
+
+        ];
+      }
   }

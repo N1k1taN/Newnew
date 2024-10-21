@@ -3,6 +3,7 @@
 import React, { useRef, useState, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation';
 
 function ContactForm({ handleBackgroundClick, callPageRef }) {
   const [phoneNumber, setPhoneNumber] = useState(''); // State to store phone number
@@ -10,6 +11,7 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const form = useRef();
+  const router = useRouter();
 
   useEffect(() => {
     // Block scrolling when popup is open
@@ -23,8 +25,7 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    // Проверяем длину введенного номера (12 цифр)
-    const phoneRegex = /^[0-9]{12}$/; // Номер должен быть точно 12 цифр
+    const phoneRegex = /^(?:[0-9]{9}|[0-9]{10}|[0-9]{12})$/; // Номер должен быть длиной 9, 10 или 12 цифр
 
     if (!phoneRegex.test(phoneNumber)) {
       setPhoneError(true);
@@ -57,6 +58,11 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
     }
   };
 
+  const handleGoHomeClick = () => {
+    window.location.reload();
+    window.location.href = '/#home';
+  };
+  
   return (
     <div
       className="backgroundpage"
@@ -77,14 +83,17 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
         }}
       >
         {formSubmitted ? (
-          <h2 className="thx">Дякую вам, ми передзвонимо!</h2>
+          <div className="thx">
+            <p>Дякуємо за Ваше звернення!</p>
+            <p>Ми передзвонимо Вам найближчим часом з цього номера +380 (93) 745 25 57</p>
+            <button onClick={handleGoHomeClick} className="close-button">На головну</button>
+          </div>
         ) : (
           <form ref={form} onSubmit={sendEmail}>
             <img className="emailpng" src="/icons/callpg.webp" alt="call" />
             <h2>Вже на варті захисту Ваших прав!</h2>
             <p>Залишайте свій номер телефону і ми зателефонуємо Вам на протязі 20 хвилин.</p>
             <p>Якщо пізніше, Ви отримаєте знижку 10%</p>
-
             <label htmlFor="phone-number">Ваш телефон</label>
             <div>
               <input

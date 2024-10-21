@@ -28,7 +28,6 @@ const Navbar = () => {
           width={350}
           height={550}
           objectFit="contain"
-          priority={true}
         />
       </Link>
       <a href="/#help" className="linked" onClick={(e) => handleSmoothScroll(e, "/#help")}>ПОСЛУГИ</a>

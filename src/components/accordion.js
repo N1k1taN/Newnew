@@ -43,13 +43,15 @@ const Accordions = () => {
             </div>
           </AccordionTrigger>
           <AccordionContent>
-            <h2>- Отримання відстрочки по догляду.</h2>
-            <h2>- Отримання відстрочки по навчанню.</h2>
-            <h2>- Отримання відстрочки по групі інвалідності. </h2>
-            <h2>- Оскарження рішень ТЦК та СП.</h2>
-            <h2>- Супровід адвоката до ТЦК та СП.</h2>
-            <h2>- Оскарження штрафів ТЦК та СП.</h2>
-            <h2>- Незаконна мобілізація.</h2>
+            <div className="AccordionContentText">
+              <h2>- Отримання відстрочки по догляду.</h2>
+              <h2>- Отримання відстрочки по навчанню.</h2>
+              <h2>- Отримання відстрочки по групі інвалідності.</h2>
+              <h2>- Оскарження рішень ТЦК та СП.</h2>
+              <h2>- Супровід адвоката до ТЦК та СП.</h2>
+              <h2>- Оскарження штрафів ТЦК та СП.</h2>
+              <h2>- Незаконна мобілізація.</h2>
+            </div>
           </AccordionContent>
         </Accordion.Item>
 
@@ -63,9 +65,11 @@ const Accordions = () => {
             </div>
           </AccordionTrigger>
           <AccordionContent>
-            <h2>- За сімейними обставинами.</h2>
-            <h2>- За станом здоров'я.</h2>
-            <h2>- За необхідністю здійснення догляду за своїми батьками чи дружиною.</h2>
+            <div className="AccordionContentText">
+              <h2>- За сімейними обставинами.</h2>
+              <h2>- За станом здоров'я.</h2>
+              <h2>- За необхідністю здійснення догляду за своїми батьками чи дружиною.</h2>
+            </div>
           </AccordionContent>
         </Accordion.Item>
 
@@ -227,17 +231,7 @@ const AccordionContent = React.forwardRef(({ children, className, ...props }, fo
     ref={forwardedRef}
     asChild
   >
-    <motion.div
-      initial="collapsed"
-      animate="open"
-      exit="collapsed"
-      variants={{
-        collapsed: { opacity: 0, height: 0, transition: { duration: 0.6, ease: "easeInOut" } },
-        open: { opacity: 1, height: 'auto', transition: { duration: 0.6, ease: "easeInOut" } },
-      }}
-    >
-      <div className="AccordionContentText">{children}</div>
-    </motion.div>
+    <div className="AccordionContentText">{children}</div>
   </Accordion.Content>
 ));
 AccordionContent.displayName = 'AccordionContent';
