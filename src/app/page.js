@@ -4,7 +4,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/zoom';
 import Accordions from "../components/accordion";
-import '../styles/App.css';
+import '../styles/App.scss';
 import OpenMenuButton from "../components/callpage";
 import Callpg from '../components/callpg';
 import classNames from 'classnames';
@@ -12,8 +12,11 @@ import Image from 'next/image';
 import { CaseResults,Comments } from '@/components/sliders';
 import Steps from '@/components/steps';
 import PanelRech from '@/components/ownerb';
-import Head from 'next/head';
-import '../styles/accordionanim.css';
+import '../styles/accordionanim.scss';
+import "../styles/variables.scss"
+import Messenger from '@/components/messenger';
+import ConsultationForm from '@/components/consulting';
+
 
 export const metadata = {
   title: "ВІЙСЬКОВИЙ АДВОКАТ, ЮРИСТ ПО ВІЙСЬКОВИМ СПРАВАМ",
@@ -51,33 +54,41 @@ function Homepage() {
       <Callpg />
       <div className="mainpage" id="home">
         <div className="info">
-          <h1>ВІЙСЬКОВИЙ АДВОКАТ</h1>
-          <h2>ОДНІ З НАЙКРАЩИХ У ВИРІШЕННІ ЮРИДИЧНИХ ПИТАНЬ З ВІЙСЬКОВОГО ПРАВА</h2>
-          <h2>ПРАЦЮЄМО ПО ВСІЙ УКРАЇНІ</h2>
+          <h1 className='font-h1'>ВІЙСЬКОВИЙ АДВОКАТ</h1>
+          <h2 className='font-h2'>ОДНІ З НАЙКРАЩИХ У ВИРІШЕННІ ЮРИДИЧНИХ ПИТАНЬ З ВІЙСЬКОВОГО ПРАВА</h2>
+          <h2 className='font-h2'>ПРАЦЮЄМО ПО ВСІЙ УКРАЇНІ</h2>
           <OpenMenuButton />
         </div>
+
+        <div className='achievment'>
+<div className='achiv'>
+  <p className='font-numbers pnumber'>2000+</p>
+  <p className='font-h4'>консультацій проведених нашими спеціалістами 
+  по всій Україні.</p>
+</div>
+<div className='achiv'>
+<p className='font-numbers pnumber'>7+</p>
+  <p className='font-h4'>років практичного досвіду вирішення юридичних питань.</p>
+</div>
+<div className='achiv'>
+<p className='font-numbers pnumber'>400+</p>
+  <p className='font-h4'>проведено більше 400 справ клієнтів.</p>
+</div>
+</div>
       </div>
 
       <div className="main">
+      
         <div className="help" id="help">
-          <h2>ПРОФЕСІЙНО НАДАЄМО ПОСЛУГИ:</h2>
+          <h2 className='font-h1'>НАШІ ПОСЛУГИ</h2>
           <Accordions />
         </div>
+        <PanelRech></PanelRech>
       <Steps></Steps> 
-        <div className="consulting" id="about">
-          <h3 className="bods">
-            <Image
-              src="/icons/logo.webp"
-              alt="ЛОГО"
-              width={500}
-              height={300}
-              layout="responsive" // делает изображение адаптивным
-            />
-          </h3>
-     </div>
-     <PanelRech></PanelRech>
+      <Messenger></Messenger>
 <CaseResults></CaseResults>
 <Comments></Comments>
+<ConsultationForm></ConsultationForm>
       </div>
     </div>
   );

@@ -27,39 +27,39 @@ const CaseResults = () => {
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: 'easeInOut' }}
     >
-      <h2> НАШІ РЕЗУЛЬТАТИ:</h2>
+      <h2 className='font-h1'> НАШІ РЕЗУЛЬТАТИ:</h2>
       <Swiper
-        modules={[Navigation, Pagination, Zoom]}
-        centeredSlides={true}
-        spaceBetween={50}
-        slidesPerView={1}
-        initialSlide={0}
-        pagination={{ clickable: true }}
-        navigation={{
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-        }}
-        allowTouchMove={true}
-        zoom={true}
-        loop={true}
-        breakpoints={{
-          1100: {
-            slidesPerView: 3,
-          },
-        }}
-        onSlideChange={(swiper) => setResultActiveIndex(swiper.realIndex)}
-      >
-        {resultSlides.map((slide, index) => (
-          <SwiperSlide key={index}>
-            <div className="swiper-zoom-container">
-              <img src={slide.imgSrc} alt={slide.text} className={resultActiveIndex === index ? 'active-slide' : 'blur-slide'} />
-            </div>
-          </SwiperSlide>
-        ))}
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
-      </Swiper>
-      <h3>{resultSlides[resultActiveIndex].text}</h3>
+  modules={[Navigation, Pagination, Zoom]}
+  centeredSlides={true}
+  spaceBetween={10}
+  slidesPerView={1.1}
+  loop={true} // Включаем бесконечный режим
+  loopFillGroupWithBlank={false} // Убираем пустые места
+  initialSlide={1}
+  pagination={{ clickable: true }}
+  navigation={{
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  }}
+  allowTouchMove={true}
+  zoom={true}
+  breakpoints={{
+    1100: {
+      slidesPerView: 3,
+    },
+  }}
+>
+  {resultSlides.map((slide, index) => (
+    <SwiperSlide key={index}>
+      <div className="swiper-zoom-container" id='swiper1'>
+        <img src={slide.imgSrc} alt={slide.text} />
+      </div>
+      <p className="slide-text font-h4">{slide.text}</p>
+    </SwiperSlide>
+  ))}
+  <div className="swiper-button-next"></div>
+  <div className="swiper-button-prev"></div>
+</Swiper>
     </motion.section>
   );
 };
@@ -83,14 +83,16 @@ const Comments = () => {
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: 'easeInOut' }}
     >
-      <h2>ВІДГУКИ</h2>
-      <span>Одна із вищих нагород для нас це відгук задоволеного клієнта!</span>
+      <h2 className='font-h1'>ВІДГУКИ</h2>
+      <span className='font-h3'>Одна із вищих нагород для нас це відгук задоволеного клієнта!</span>
       <Swiper
         modules={[Navigation, Pagination, Zoom]}
         centeredSlides={true}
         spaceBetween={50}
         slidesPerView={1}
         initialSlide={2}
+        loop={true} // Включаем бесконечный режим
+        loopFillGroupWithBlank={false} // Убираем пустые места
         pagination={{ clickable: true }}
         navigation={{
           nextEl: '.swiper-button-next',
@@ -107,14 +109,14 @@ const Comments = () => {
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
       >
         {slides.map((slide, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} className='swiper2'>
             <div className="swiper-zoom-container">
               <img
                 src={slide.imgSrc}
                 alt="Відгуки"
                 className={activeIndex === index ? 'active-slide' : 'blur-slide'}
-                width={350}
-                height={550}
+                width={450}
+                height={360}
                 priority={true}
               />
             </div>

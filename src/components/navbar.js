@@ -23,20 +23,21 @@ const Navbar = () => {
     <div className="navbar">
       <Link href="/#home" className="logoname">
         <Image
-          src="/icons/logo.webp"
+          src="/icons/logo.png"
           alt="logo"
-          width={350}
-          height={550}
+          width={170}
+          height={63}
           objectFit="contain"
         />
       </Link>
-      <a href="/#help" className="linked" onClick={(e) => handleSmoothScroll(e, "/#help")}>ПОСЛУГИ</a>
-      <a href="/#case" className="linked" onClick={(e) => handleSmoothScroll(e, "/#case")}>КЕЙСИ</a>
-      <Link href="/onas" className="linked">
+      <a href="/#help" className="linked font-menu" onClick={(e) => handleSmoothScroll(e, "/#help")}>ПОСЛУГИ</a>
+      <a href="/#case" className="linked font-menu" onClick={(e) => handleSmoothScroll(e, "/#case")}>КЕЙСИ</a>
+      <Link href="/onas" className="linked font-menu">
         ПРО НАС
       </Link>
-      <a href="/#vidguk" className="linked" onClick={(e) => handleSmoothScroll(e, "/#vidguk")}>ВІДГУКИ</a>
-      <a href="/#contacts" className="linked" onClick={(e) => handleSmoothScroll(e, "/#contacts")}>КОНТАКТИ</a>
+      <a href="/#vidguk" className="linked font-menu" onClick={(e) => handleSmoothScroll(e, "/#vidguk")}>ВІДГУКИ</a>
+      <a href="/#contacts" className="linked font-menu" onClick={(e) => handleSmoothScroll(e, "/#contacts")}>КОНТАКТИ</a>
+      <a href="" className="linked font-numbers">+380506598496</a>
       <Dropdown></Dropdown>
     </div>
   );

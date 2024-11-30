@@ -1,0 +1,1394 @@
+@import './variables.scss';
+
+
+html{
+  width: 100%;
+  }
+  *{
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+              outline: none;
+  }
+
+  .butcall{
+    background-color: $accent-color;
+    border: none;
+   color:$white-text;
+    padding: 20px 42px;
+    text-align: center;
+   text-decoration: none;
+    display: inline-block;
+    font-weight: 900;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  margin-top: 2.5%;
+  }
+  
+.tes
+  .phone-prefix{
+position: relative;
+left: -2%;
+top: 5%;
+  }
+  div>input{
+    height: 100%;
+  }
+  
+  .butcall:hover{
+      background-color: $white-color;
+      color: $black-text;
+      outline: 2px solid $black-color;
+  }
+  .navbar{
+      height: 70px;
+  display: flex;
+  top: 0;
+  position: sticky;
+  justify-content: space-around;
+  row-gap: 10px;
+  align-items: center;
+  background-color:$header-color;
+  z-index: 100;
+  }
+  .linked{
+    color: $white-text;
+    transition: all ease-in-out 0.6s;
+  }
+  .linked:hover{
+    border-bottom: 1px solid;
+    border-color: $white-text;
+    margin-bottom: -2px;
+  }
+  #Swipe{
+      height: 75vh;
+      width: 75vw;
+  }
+  
+  .navbar>a{color: rgb(255, 255, 255);
+  vertical-align: middle;
+  cursor: pointer;
+  text-decoration: none;
+  }
+  .name{
+    padding-top: 37px;
+      color: black;
+      display: inline-block;
+      text-shadow: 1px  black;
+      font-weight: 3000;
+      z-index: 15;
+  
+  }
+  .linkbutton{
+    background-color: $white-color;
+    border: none;
+    color: $black-text;
+    padding: 10px 42px;
+    text-align: center;
+   text-decoration: none;
+    display: inline-block;
+    font-weight: 900;
+    outline: 1px $accent-color solid;
+    margin-left: 1px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  }
+  .linkbutton:hover{
+    background-color: $accent-color;
+    color:$white-text;
+  }
+  
+  
+  .mainpage{
+      display: flex;
+      background: url(/icons/back.png);
+      background-position: center; 
+      flex-direction: column;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: 0px 15%;
+      width: 100%;
+      padding-top: 50px;
+      max-height: 1080px;}
+      .achievment{
+        display: flex;
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: center;      
+      position: relative;
+      top: 150px;
+      }
+      .achiv{
+        margin: 20px;
+        width: 20%;
+        display: inline-block;
+        padding: 25px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: $white-color;
+        -webkit-box-shadow: 1px 4px 11px 7px rgba(34,34,2,0.19);
+        -moz-box-shadow: 1px 4px 11px 7px rgba(34,34,2,0.19);
+        box-shadow: 1px 4px 11px 7px rgba(34,34,2,0.19);      }
+
+      .achiv>p{
+        width: 100%;
+        color: $black-text;
+      }
+      .achiv>p:first-child{
+        font-size: 40px;
+        padding-bottom: 20px;
+      }
+      
+  .logoname{
+      display: flex;
+      align-items: center;
+      width: 30%;
+      height: 100%;
+      padding-left: 100px;
+  }
+  .logoname>img{
+      object-fit: contain;
+      z-index: 15;
+  }
+  
+  .info{
+      display:flex;
+      width: 100%;
+      padding-left: 18%;
+      max-height: 1080px;
+      flex-wrap: wrap;
+      justify-content: center;
+      flex-direction: column;
+      align-items:flex-start;
+      align-content: start;
+      padding-top: 250px;
+  }
+  .info>h1{
+    color: $white-text;
+    padding-bottom: 1%;
+  }
+  .info>h2{
+    color: $white-text;
+    padding-top: 1%;
+  }
+  
+
+  .main{
+    padding-top: 250px;
+      width: 100%;
+      background: linear-gradient(180deg, rgba(34,34,34,0.4514180672268907) 0%, #EAEAEA 3%);  }
+  
+    
+  .AccordionTrigger{
+    text-decoration: none;
+    border: none;
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+align-content: space-around;
+justify-content: space-between;   
+ align-items: stretch;
+border-bottom: 1px solid $accent-color;
+transition: all 1s ease-in;
+background-color: inherit;
+}
+.AccordionContentText{
+  border-bottom: $accent-color 2px solid;
+}
+.AccordionRoot{
+width: 93%;
+background-color: inherit;
+}
+.consulting>.bods{
+  display: flex;
+  padding-top: 0;
+  flex-direction: row;
+    width: 100%;
+    justify-content: center;
+height: 140px;}
+
+
+.consulting>.bods>img{
+  display: inline-block;
+  object-fit: contain;
+  width: 100%;
+}
+  
+
+
+.AccordionTrigger::after{
+  height: 100%;
+align-self: end;
+content: url(/icons/x-solid.svg);
+
+width: 67px;
+height: 67px;
+margin: auto;
+}
+.AccordionTrigger>div{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: start;
+    display: inline-block;
+    width: 85%;
+      font-weight: 700;
+    height: 100%;
+    color: black;
+}
+
+.AccordionTrigger[data-state="open"]::after{
+  content: url(/icons/plus-solid.svg);
+  width: 27px;
+height: 27px;
+}
+
+  .help{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: space-around;
+      align-items: center;
+      scroll-margin-top: 110px;
+  }
+  .help>h2{
+    margin-top: 20px;
+    padding-bottom: 20px;
+  }
+  .socials-dropdown{
+   border-radius: 50px;
+    width: 15%;
+    margin-left: 4%;
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+.dirk{
+  border-top: 1px solid $accent-color;;
+}
+  
+
+  /* Constult */
+  .consulting{
+flex-direction: row;
+      display:flex;
+      flex-wrap: wrap;
+      
+      align-content: space-around;
+          justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #4b5320;
+  scroll-margin-top: 50px; /* Задайте смещение, например, высоту фиксированного меню */
+  }
+  
+.Onastext>p{
+  width: 75%;
+      margin-top: 20px;
+    font-weight: 600;
+    color: black;
+}
+.Onastext>p:nth-child(3){
+margin-bottom: 20px;
+}
+
+  
+  .consulting>h2{
+      margin-top:20px;
+      height: 20%;
+      text-align: center;
+      width: 90%;
+  }
+  
+
+
+  
+  .backgroundpage{
+    display: flex;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+  backdrop-filter: blur(3px);
+  z-index: 5;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+  .callpng{
+    margin-right: 10px;
+    
+  }
+  .X{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 2%;
+  }
+  
+  .callpage{
+      border: solid 2.5px #4b5320;
+      display: flex;
+      background-color: white;
+
+      z-index: 6;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      position: relative;
+      top: 2%;
+  }
+  .callpage>form>div>input{
+    margin-bottom: 25px;
+  }
+  .callpage>form>div{
+    display: flex;
+    justify-content: center;
+  }
+  .callpage>form>p{
+    text-align: center;
+  }
+
+  form{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  form>h2{
+      text-align: center;
+  }
+  form>p{
+      width: 60%;
+  }
+  form>label{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-left: 10%;
+    width: 100%;
+    text-align: start;
+      font-weight: 600;
+  }
+  
+  form>input{
+    width: 90%;
+    height: 45px;
+      border: solid 1px #4b5320;
+  }
+  .exitcall{
+    position: fixed;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.171);
+    z-index: 1011;
+    height: 6%;
+    color: black;
+    cursor: pointer;
+    top: 0%;
+    padding-left: 20px;
+    opacity: 10px;
+  }
+  .exitcall>img{
+    width: 50px;
+    rotate: 45deg;
+  }
+  
+  .senderbutt{
+    border-radius: 12px;
+      background-color: rgba(255, 204, 0, 1);
+      border: none;
+     color:rgba(29, 29, 27, 1);
+      padding: 16px 90px;
+      text-align: center;
+     text-decoration: none;
+     font-weight: 700;
+      display: inline-block;
+    cursor: pointer;
+    -webkit-transition: all 0.3s;
+    margin-bottom: 10px;
+    }
+    .navbar>div>.butcall{
+      margin: 0px 0px 0px 0px;
+      padding: 16px 32px;
+  }
+  
+    .senderbutt:hover{
+        background-color: rgba(255, 204, 0, 0.85);
+    }
+
+    :root{
+        --swiper-theme-color:none;
+    }
+    .swiper{
+        height: 89%;
+    }
+  
+.dropdown-container{
+    width: 20%;
+    height: 100%;
+}
+
+    .dropdown-button{
+  background: url(/icons/bars-solid.svg)no-repeat center -5px;
+  background-size: contain;
+      width: 100%;
+      height: 100%;
+    padding-top: 15px;
+    border: none;
+    position: relative;
+    z-index: 15;
+    }
+
+  
+    .dropdown-container {
+        position: relative;
+        
+      }
+      
+      .dropdown-button {
+        padding: 10px 20px;
+        
+        cursor: pointer;
+      }
+
+      
+      .dropdown-menu {
+        padding-top: 15px;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+        display: block;
+        position: fixed;
+        top: 0%;
+        margin-top: 60px;
+        z-index: 1;
+        left: 0;
+        color: white;
+      }
+
+
+    
+      ul{
+        background-image: url(/icons/camo.png);
+        border: none;
+      }
+      
+      .dropdown-menu li {
+        padding: 10px;
+        text-align: center;
+     
+      }
+      li>a{
+        display: block;
+        width: 100%;
+        color: white;
+        text-decoration: none;
+      }
+      .dropdown-menu li:last-child {
+        border-bottom: none;
+      }
+      .socials-dropdown>img{
+        width: 40px;
+        height: 40px;
+padding-top: auto;
+padding-left: auto;
+
+
+      }
+      ul>li:nth-child(7){
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+        height: 150px;
+      }
+      
+  section{
+      width: 100%;
+      scroll-margin-top: 65px; /* Задайте смещение, например, высоту фиксированного меню */
+  }
+  .Comments>span{
+    padding-left: 20%;
+    padding-right: 20%;
+    display: block;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .swiper-slide-zoomed{
+      z-index: 15;
+  }
+  
+  .toggleli{
+      display: block;
+  }
+  section>h2{
+      text-align: center;
+      margin-bottom: 20px;
+      margin-top: 20px;
+  }
+  .Comments>h2{
+    text-align: center;
+    margin: 20px 0 20px 0;
+  }
+
+
+    section>h3{
+      padding-left: 20px;
+      padding-right: 20px;
+      font-weight: 100;
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      width: 100%;
+      transition: 2.5s all ease-in;
+    }
+
+.slide-text {
+  text-align: center;
+  margin-left: 2px;
+  margin-top: 10px;
+  color: #333;
+  border: 1px solid $accent-color; /* Красная рамка */
+  padding: 10px; /* Отступы */
+  box-sizing: border-box; /* Учитывает рамку и отступы */
+  height: 100px; /* Фиксированная высота для одинакового размера */
+  display: flex; /* Центрирование текста */
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Скроет текст, выходящий за границы */
+  word-break: break-word; /* Разрыв слов при необходимости */
+}
+.custom-slide {
+  width: 300px !important; /* Фиксированная ширина */
+  height: 600px; /* Фиксированная высота */
+  flex-shrink: 0; /* Отключаем автоматическое уменьшение размера слайда */
+  display: flex; /* Для правильного позиционирования содержимого */
+  flex-direction: column; /* Расположение элементов вертикально */
+  justify-content: center; /* Центрирование по вертикали */
+  align-items: center; /* Центрирование по горизонтали */
+  box-sizing: border-box; /* Учитываем padding и border */
+}
+.swiper{
+  padding-bottom: 20px;
+}
+.swiper-pagination {
+  z-index: 5;
+  position: relative;
+  bottom: -15px !important;
+  left: 0;
+  width: 100%;
+  text-align: center; /* Выравнивание по центру */
+}
+
+.swiper-pagination-bullet {
+  background-color: rgba(2, 9, 16, 1); /* Цвет точек */
+  opacity: 0.3; /* Полная видимость */
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1; /* Полная видимость */
+  background-color: $accent-color; /* Цвет активной точки */
+}
+
+.swiper-button-next {
+  top: 45%; /* Поднимаем кнопку выше */
+  right: 20px; /* Двигаем левее */
+  transform: translateY(-50%); /* Центрирование по вертикали */
+  background-image: url('/icons/arrright.png'); /* URL до изображения */
+  background-size: contain; /* Убедитесь, что изображение помещается */
+  background-repeat: no-repeat; /* Отключаем повторение */
+  background-position: center; /* Центрируем изображение */
+  width: 50px; /* Задайте размер кнопки */
+  height: 50px;
+  color: transparent; /* Убираем стандартный значок */
+}
+.swiper-button-prev {
+  top: 45%; /* Поднимаем кнопку выше */
+  transform: translateY(-50%); /* Центрирование по вертикали */
+  background-image: url('/icons/arrleft.png'); /* URL до изображения */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50px;
+  height: 50px;
+  color: transparent; /* Убираем стандартный значок */
+}
+
+
+
+.swiper-slide-zoomed{z-index: 15;}
+#swiper1>img{
+  width: 100%;
+  height: 600px;
+  object-fit: contain;
+}
+.swiper-zoom-container>.imgcont{
+  object-fit: contain;
+}
+
+.swiper-container {
+  width: 100%; /* Обеспечивает адаптивность */
+  overflow: hidden; /* Убирает лишние части за пределами контейнера */
+}
+
+.swiper-slide {
+  transition: transform 0.3s ease; /* Плавность анимации */
+}
+.swiper2 img {
+  height: 360; /* Устанавливаем высоту изображения */
+  object-fit: contain; /* Гарантируем, что изображение корректно впишется */
+}
+
+
+
+.swiper-container {
+  width: 100%;
+  height: auto; /* Если вам нужно, чтобы высота контейнера была адаптивной */
+}
+.contacts{
+    display: inline block;
+    width: 100%;
+    border-top: 2px solid #4b5320;
+    height: 350px;
+    background-color: #4b5320;
+}
+.contactinfo{
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    height: 71%;
+    align-items: center;
+}
+
+.contactinfo>div>div>p:nth-child(1){
+    padding-top: 5%;
+}
+.bybox{
+  display: flex;
+  width: 100%;
+}
+.contactinfo>div{
+    height: 100%;
+    margin-left: 50px;
+    width: 25%;
+}
+.contactinfo>div:nth-child(1){
+  margin-left: 200px;
+}
+.contactinfo>div:nth-child(2){
+  margin-left: 150px;
+}
+.contactinfo>div:nth-child(3){
+margin-right: 75px;
+}
+.contactinfo>div>p:nth-child(3){
+    margin-top: 1.5%;
+}
+
+.Messenger-block{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-image: url(/icons/camo.png);
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 90px;
+}
+.Messenger-block>h2{
+  color:$white-text;
+  width: 100%;
+  text-align: center;
+  padding: 50px;
+}
+
+.messengers{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: flex-start;
+    justify-content: center;
+}
+.messengers>a{
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  margin: 10px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+width: 20%;    height: 100%;
+    background-color: blue;
+    display: flex;
+    justify-content:space-around;
+    cursor: pointer;
+}
+.contactinfo>div:nth-child(1)>div{
+    width: 100%;
+    height: 50%;
+}
+.contactinfo>div:nth-child(2)>div{
+    width: 100%;
+    height: 50%;
+}
+.messengers>a>img{
+padding-top: auto;
+    width: 35px;
+    align-self: center;
+}
+.messengers>a:nth-child(1){
+    background-color: #7360f2;
+}
+.messengers>a:nth-child(1){
+    background-color: #7360f2;
+}
+.messengers>a:nth-child(2){
+    background-color: rgb(255, 255, 255);
+}
+.messengers>a:nth-child(3){
+    background-color: #24A1DE;
+}
+.messengers>a:nth-child(4){
+    background-color: #25D366
+    ;
+}
+
+.allrights{
+margin-top: 20px;
+  font-weight: 100;
+  height: 13vh;
+  color: white;
+  text-align: center;
+  background-color: #4b5320;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.buttonfast{
+  position: fixed;
+  top: 85%;
+  right: 10%;
+  background-color: #ADFF2F	;
+  text-decoration: none;
+  height: 60px;
+  width: 60px;
+  border-radius: 30px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+z-index: 90;}
+.pgd{
+  position: fixed;
+  background-color: white;
+  height: 450px;
+  width: 360px;
+  padding: 20px 30px 40px 30px;
+  top: 35%;
+  border-radius: 8px;
+  right: 12%;
+  z-index: 90;
+  -webkit-box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75);
+box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75)
+}
+.Ownerb{
+width: 25%;
+  background-image: url(/icons/owner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+background-position: center top 20px;
+
+}
+.ownername{
+  text-align: left;
+  width: 100%;
+  display: inline-block;
+  padding-bottom: 50px;
+  
+}
+.ownername>p{
+  padding-left: 50%;
+}
+.textbys{
+  display: flex;
+  width: 60%;
+  padding-bottom: 200px;
+  padding-top: 200px;
+}
+.ACDS{
+  padding-left: 250px;
+  padding-right: 250px;
+  width: 100%;
+}
+
+.ACDS>p:nth-child(2){
+  padding-top: 30px;
+}
+.ACDS>h3{
+text-align: start;
+}
+.panelrech{
+  background-image:url(/icons/camo.png);
+  margin-top: 50px;
+  padding-top: 25px;
+  display: flex;
+  color: $white-text;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.Callform{
+  justify-self: unset;
+  
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  max-width: 80px;
+}
+.steps{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  padding-left: 20%;
+}
+ul>.dad{
+  padding-top: 20px;
+}
+ul>.dad:nth-child(1){
+  padding-top: 40px;
+}
+
+
+
+.Steppp{
+  padding-top: 50px;
+}
+.Steppp>h2{
+  text-align: center;
+  width: 100%;
+}
+.step {
+padding: 20px;  
+aspect-ratio: 1 / 1;
+  border: 2px solid red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5rem 0;
+  position: relative;
+font-weight: bold;}
+.step::after {
+  content: '';
+  width: 2px;
+  height: 1.2rem;
+  background-color: red;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.steps-text{
+  padding-left: 50px;
+}
+
+.steps-text>h3:nth-child(1){
+  padding-top: 4%;
+}
+.steps-text>h3:nth-child(2){
+  padding-top: 7.7%;
+}
+.steps-text>h3:nth-child(3){
+  padding-top: 7.7%;
+}
+.steps-text>h3:nth-child(4){
+  padding-top: 7.7%;
+}
+.steps-text>h3:nth-child(5){
+  padding-top: 7.7%;
+}
+
+.divider{
+  display: inline-block;
+  width: 2px;
+  height: 3px;
+  background-color: black; /* Цвет полоски */
+  margin: 10px 0; /* Отступ сверху и снизу */
+}
+.phonebutton{
+  padding: 8px 14px;
+  border-radius: 12px;
+  transition: all 0.5 ease-in;
+}
+
+
+#vidguk{
+  scroll-margin-top: 120px;
+}
+#case{
+  scroll-margin-top: 120px;
+}
+.Comments{
+  padding-bottom: 25px;
+}
+
+.thx{
+  vertical-align: center;
+    padding: 40px;
+  text-align: center;
+}
+.thx>p:nth-child(1){
+  font-weight: 700;
+}
+
+.thx>button{
+  font-weight: 700;
+  margin-top: 30px;
+  padding: 12px 20px;
+  background-color: rgba(255, 204, 0, 1);
+  border-radius: 14px;
+  transition: all 0.4s ease-in;
+  cursor: pointer;
+}
+.thx>button:hover{
+  background-color: rgba(255, 204, 0, 0.85);
+  color: white;
+}
+
+
+.accorn{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.AccordionContent[data-state="open"] {
+	animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+.AccordionContent[data-state="closed"] {
+	animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+.senderbutt2{
+  background-color: #4b5320;
+  border: none;
+ color:white;
+  padding: 16px 60px;
+  text-align: center;
+ text-decoration: none;
+  display: inline-block;
+cursor: pointer;
+-webkit-transition: all 0.3s;
+margin-bottom: 30px;
+}
+.emailpng{
+  width: 100%;
+  height: 450px;
+  object-fit: fill;
+}
+.callpage{
+  border-radius: 12PX;
+  width: 550px;
+  border: none;
+}
+.Onastext{
+  padding-left: 1.5%;
+  width: 70%;
+}
+.giv>div>a{
+text-decoration: none;
+color: white;}
+
+.form-container{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex
+  ;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+  }
+  .form-content{
+    width: 45%;
+  }
+#Consul{
+  flex-wrap: wrap;
+  align-items: center;
+width: 32%;
+}
+#Consul>a{
+  width: 40%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.form-group>input{
+  width:  595px;
+  height: 58px;
+  top: 78px;
+  padding: 18px 25px 18px 25px;
+  gap: 0px;
+  opacity: 0px;
+  border: none;
+  box-shadow: 0px 8px 32px 0px rgba(0,0,0,0.27)
+
+  ;
+}
+#buttoncons {
+  display: flex; /* Устанавливаем flexbox */
+  align-items: center; /* Центрируем содержимое по вертикали */
+  justify-content: center; /* Центрируем содержимое по горизонтали */
+  text-align: center; /* Центрирование текста */
+  padding: 5px 145px; /* Отступы внутри кнопки */
+  cursor: pointer; /* Указатель мыши при наведении */
+  gap: 10px; /* Расстояние между текстом и иконкой */
+}
+
+#buttoncons>img {
+  width: 50px; /* Ширина иконки */
+  height: 50px; /* Высота иконки */
+}
+.consultation-form>h3{
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.footer{
+  width: 100%;
+  background-image: url(/icons/camo.png);
+}
+.footer-info{
+  padding-top: 80px;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: flex;
+  color: $white-text;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer-info>div>h2{
+  display: block;
+}
+.footer-info>div>h3{
+  padding-top: 10px;
+}
+
+.footer-info>div{
+  width: 20%;
+  margin: 10px;
+}
+
+.footer-info>img{
+  width: 170px;
+  height: 63px;
+}
+.footer-socials{
+  width: 30% !important;
+  color: $white-text;
+  margin-left: 19% !important;
+  display: flex;
+  flex-direction: column;
+    align-items: flex-start;
+
+}
+.socials{display: flex;
+  padding-top: 20px;
+}
+.social{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white-color;
+  width: 45px;
+  height: 40px;
+  border-radius: 40px;
+  margin: 5px;
+  cursor: pointer;
+  
+}
+.footer-end>h3{
+  text-align: center !important;
+
+}
+.social>img{
+  width: 34px;
+  height: 34px;
+}
+.socials>a:nth-child(1){
+  background-image: url(/icons/socials/tiktok.svg);
+  
+}
+.footer-end{
+  color: $white-color;
+  padding-top: 60px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+@media (max-width: 1260px){
+  .navbar>.linked{
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 1180px){
+  .mainpage{
+   height: 643px;
+  }
+.info{
+  padding-top: 10%;
+  padding-left: 4%;
+}
+.butcall{
+  margin-top: 30px;
+}
+.achievment{
+  flex-direction: column;
+  align-items: center;
+  top: 240px;
+}
+.achiv{
+  width: 50%;
+}
+.main{
+padding-top: 740px;}
+
+.ACDS{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.textbys{
+  width: 40%;
+}
+.Ownerb{
+  width: 40%;
+}
+.ownername>P{
+  padding-left: 30%;
+}
+.form-container{
+  flex-direction: column;
+}
+#Consul{
+  width: 100%;
+  padding-top: 5%;
+}
+#Consul>a{
+  width: 20%;
+}
+.steps{
+  padding-left: 8%;
+}
+.steps-text > h3:nth-child(1) {
+padding-top: 4%;
+}
+.steps-text > h3:nth-child(2) {
+  padding-top: 7%;
+}
+.steps-text > h3:nth-child(3) {
+  padding-top: 8%;
+}
+.steps-text > h3:nth-child(4) {
+  padding-top: 8%;
+}
+.steps-text > h3:nth-child(5) {
+  padding-top: 8%;
+}
+.consultation-form > h3{
+  text-align: center !important;
+}
+.footer-info > img {
+width: 100%;
+object-fit: contain;
+
+}
+.contact{
+  width: 30% !important;
+}
+.grafik{
+  width: 30%!important;
+}
+#swiper1>img{
+  width: 100%;
+  height: 860px;
+  object-fit: fill;
+}
+.slide-text{
+  margin-top: 8px;
+}
+.logoname{
+  padding-left: 20px;
+}
+.footer-info {
+  padding: 40px;
+}
+.footer-info >div{
+  width: 45% !important;
+}
+.footer-socials{
+margin: 10px !important;}
+}
+@media (max-width: 1023px){
+  .steps-text > h3:nth-child(1) {
+    padding-top: 5%;
+    }
+    .steps-text > h3:nth-child(2) {
+      padding-top: 12%;
+    }
+    .steps-text > h3:nth-child(3) {
+      padding-top: 12%;
+    }
+    .steps-text > h3:nth-child(4) {
+      padding-top: 12%;
+    }
+    .steps-text > h3:nth-child(5) {
+      padding-top: 8%;
+    }
+
+
+
+}
+@media (max-width: 768px){
+.info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 0 0 0;
+  padding-left: 1%;
+  padding-right: 1%;
+  padding-top: 20%;
+  
+}
+.info>h2{
+font-family: Montserrat;
+font-size: 18px;
+font-weight: 700;
+line-height: 23.4px;
+letter-spacing: 0.02em;
+text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+}
+.info>h1{
+  order: 0;
+  text-align: center;
+  padding: 20PX;
+}
+.info>h2:nth-child(3){
+order: -1;}
+.mainpage{
+  background-position: center;
+}
+.achievment {
+top: 200px;
+
+}
+.achiv{
+  width: 75%;
+}
+.panelrech{
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+.textbys{
+  padding: 0 0 0 0;
+  width: 100%;
+}
+.Ownerb{
+  width: 100%;
+  height: 550px;
+}
+.ownername > p{
+  text-align: center;
+  padding-left: 0;
+}
+.ownername > p:nth-child(1){
+  text-align: center;
+  padding-top: 30px;
+}
+.steps{
+  padding-right: 2%;
+}
+.steps-text > h3:nth-child(1) {
+  padding-top: 5%;
+}
+.steps-text > h3:nth-child(2) {
+  padding-top: 11%;
+}
+
+.steps-text > h3:nth-child(3) {
+  padding-top: 9%;
+}
+
+.steps-text > h3:nth-child(4) {
+  padding-top:9%;
+}
+.steps-text > h3:nth-child(5) {
+  padding-top: 9%;
+}
+.messengers > a{
+  width: 45%;
+}
+.messengers{
+  flex-wrap: wrap;
+}
+
+}
+@media (max-width: 450px){
+  .steps-text > h3:nth-child(1) {
+    padding-top: 1%;
+    }
+    .steps-text > h3:nth-child(2) {
+      padding-top: 10%;
+    }
+    .steps-text > h3:nth-child(3) {
+      padding-top: 10%;
+    }
+    .steps-text > h3:nth-child(4) {
+      padding-top: 5%;
+    }
+    .steps-text > h3:nth-child(5) {
+      padding-top: 2%;
+    }
+    .form-group > input{
+      width: 300px;
+    }
+    #buttoncons {
+padding: 5px 40px;
+}
+.footer-info > div{
+  width: 100% !important;
+  text-align: center;
+}
+#Consul > a{
+  width: 40%;
+}
+#Consul{
+flex-wrap: wrap
+}
+.messengers > a{
+  width: 40%;
+}
+.Messenger-block>h2{
+  padding: 0 0 0 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+}
+  #swiper1 > img {
+      width: 100%;
+      height: 602px;
+  }
+  .AccordionTrigger{
+    flex-wrap: nowrap;
+  }
+  .footer-socials{
+    align-items: center;
+  }
+}
+

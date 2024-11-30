@@ -1,7 +1,6 @@
 import React from "react";
-import Head from 'next/head';
-import "../../styles/App.css";
-import "../../styles/about.css";
+import "../../styles/App.scss";
+import "../../styles/about.scss";
 import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
 import Image from "next/image";

@@ -17,7 +17,7 @@ const OpenMenuButton = () => {
     // Set a 20-second timer to open the form automatically
     timerRef.current = setTimeout(() => {
       setIsMenuOpen(true);
-    }, 15000);
+    }, 534534535355);
 
     return () => clearTimeout(timerRef.current);
   }, []);
@@ -33,7 +33,7 @@ const OpenMenuButton = () => {
   return (
     <div>
       {/* Button to manually open the contact form */}
-      <button className="butcall" onClick={openMenu}>
+      <button className="butcall font-semibold-16px" onClick={openMenu}>
        ЗАМОВИТИ КОНСУЛЬТАЦІЮ
       </button>
 
