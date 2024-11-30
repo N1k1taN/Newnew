@@ -1,23 +1,19 @@
 'use client';
 
-import React, { useRef, useState, useEffect } from 'react';
-import emailjs from 'emailjs-com';
+import React, { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { useRouter } from 'next/navigation';
+import emailjs from 'emailjs-com';
 
-function ContactForm({ handleBackgroundClick, callPageRef }) {
-  const [phoneNumber, setPhoneNumber] = useState(''); // State to store phone number
+function ContactForm({ handleBackgroundClick, callPageRef, handleCloseClick }) {
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [phoneError, setPhoneError] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
 
   const form = useRef();
-  const router = useRouter();
 
   useEffect(() => {
-    // Block scrolling when popup is open
     document.body.style.overflow = 'hidden';
     return () => {
-      // Re-enable scrolling when popup is closed
       document.body.style.overflow = 'auto';
     };
   }, []);
@@ -25,95 +21,75 @@ function ContactForm({ handleBackgroundClick, callPageRef }) {
   const sendEmail = (e) => {
     e.preventDefault();
 
-    const phoneRegex = /^(?:[0-9]{9}|[0-9]{10}|[0-9]{12})$/; // Номер должен быть длиной 9, 10 или 12 цифр
+    const phoneRegex = /^(?:[0-9]{9}|[0-9]{10}|[0-9]{12})$/;
 
     if (!phoneRegex.test(phoneNumber)) {
       setPhoneError(true);
       return;
     }
 
-    setPhoneError(false); // Сброс ошибки, если валидация проходит
+    setPhoneError(false);
 
-    // Отправка формы через EmailJS
     emailjs
       .sendForm('service_6y4cf6d', 'template_j9ce8db', form.current, 'Oa2baTXpg0UruiePo')
-      .then(
-        (result) => {
-          setFormSubmitted(true); // Успешная отправка формы
-        },
-        (error) => {
-          console.error('Ошибка отправки формы:', error.text);
-        }
-      );
+      .then(() => setFormSubmitted(true))
+      .catch((error) => console.error('Ошибка отправки формы:', error));
 
-    e.target.reset(); // Сброс формы после отправки
-    setPhoneNumber(''); // Очистить состояние номера телефона
+    e.target.reset();
+    setPhoneNumber('');
   };
 
-  // Обработчик для обновления состояния номера телефона
-  const handlePhoneNumberChange = (e) => {
-    const input = e.target.value;
-    if (/^[0-9]*$/.test(input)) { // Проверяем, что введённые символы - цифры
-      setPhoneNumber(input); // Обновляем состояние только если это цифры
-    }
-  };
-
-  const handleGoHomeClick = () => {
-    window.location.reload();
-    window.location.href = '/#home';
-  };
-  
   return (
     <div
       className="backgroundpage"
       style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.5)', zIndex: 999 }}
-      onClick={handleBackgroundClick} // Обработчик для закрытия фона по клику
+      onClick={handleBackgroundClick}
     >
-      <div className="exitcall"><img src="icons/plus-solid.svg" alt="close"></img></div>
       <motion.div
         className="callpage"
         ref={callPageRef}
-        onClick={(e) => e.stopPropagation()} // Прекращаем всплытие клика
+        onClick={(e) => e.stopPropagation()}
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        style={{
-          maxHeight: '90vh', // Ограничение высоты popup
-          overflowY: 'auto', // Включение прокрутки по вертикали, если содержимое превышает высоту окна
-        }}
       >
+        <div
+          className="closepopup font-h2"
+          onClick={handleCloseClick}
+          style={{  cursor: 'pointer' }}
+        >
+          ✖
+        </div>
+
         {formSubmitted ? (
           <div className="thx">
-            <p>Дякуємо за Ваше звернення!</p>
-            <p>Ми передзвонимо Вам найближчим часом з цього номера +380 (93) 745 25 57</p>
-            <button onClick={handleGoHomeClick} className="close-button">На головну</button>
+            <p className="font-semibold-16px">Дякуємо за Ваше звернення!</p>
+            <p className="font-text-18px-regular">Ми передзвонимо Вам найближчим часом з цього номера +380 (93) 745 25 57</p>
           </div>
         ) : (
           <form ref={form} onSubmit={sendEmail}>
-            <img className="emailpng" src="/icons/callpg.webp" alt="call" />
-            <h2>Вже на варті захисту Ваших прав!</h2>
-            <p>Залишайте свій номер телефону і ми зателефонуємо Вам на протязі 20 хвилин.</p>
-            <p>Якщо пізніше, Ви отримаєте знижку 10%</p>
-            <label htmlFor="phone-number">Ваш телефон</label>
+            <img className="emailpng" src="/icons/callpg.png" alt="call" />
+            <h2 className="font-h5">Вже на варті захисту Ваших прав!</h2>
+            <p className="font-text-18px-regular">Залишайте свій номер телефону і ми зателефонуємо Вам на протязі 20 хвилин.</p>
+            <p className="font-semibold-16px">Якщо пізніше, Ви отримаєте знижку 10%</p>
             <div>
               <input
                 type="tel"
-                value={phoneNumber} // Контролируемый input
-                onChange={handlePhoneNumberChange} // Обновление состояния при вводе
+                value={phoneNumber}
+                onChange={(e) => setPhoneNumber(e.target.value)}
                 name="phone-number"
                 id="phone-number"
-                maxLength="12" // Ограничение на ввод 12 цифр
-                placeholder='+380'
+                className="font-h3"
+                maxLength="12"
+                placeholder="Ваш номер телефону"
                 required
-                inputMode="numeric" // Открывает цифровую клавиатуру на мобильных устройствах
-                pattern="[0-9]*" // Ограничение на ввод только цифр
+                inputMode="numeric"
+                pattern="[0-9]*"
               />
             </div>
-
             {phoneError && <p style={{ color: 'red' }}>Неправильний формат номера</p>}
-
-            <button className="senderbutt" type="submit">
-              ЗАТЕЛЕФОНУЙТЕ МЕНІ
+            <button className="senderbutt font-semibold-16px" type="submit">
+              ЗАМОВИТИ КОНСУЛЬТАЦІЮ<img src="/icons/x-solid.svg" alt="icon" />
             </button>
           </form>
         )}

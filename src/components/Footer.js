@@ -25,10 +25,10 @@ return<div className="footer">
 <div className="footer-socials">
   <h2 className="font-h2">Follow us</h2>
   <div className="socials">
-    <a className="social"><img src="/icons/socials/tiktok.svg"></img></a>
-    <a className="social"></a>
-    <a className="social"></a>
-    <a className="social"></a>
+    <a className="social" href="https://www.tiktok.com/@nlaw.company?_t=8puk4R0nGdx&_r=1" rel="noopener noreferrer" > <img src="/icons/socials/tiktok.svg"></img></a>
+    <a className="social" rel="noopener noreferrer" href="https://www.instagram.com/nlaw_company?igsh=cWs1MXg4a2poaW5u&utm_source=qr"><img src="/icons/socials/instagram.svg"></img></a>
+    <a className="social" rel="noopener noreferrer" href="https://www.facebook.com/profile.php?id=61566465502728"><img src="/icons/socials/facebook.svg"></img></a>
+    <a className="social" href="http://www.youtube.com/@NLAW_COMPANY" rel="noopener noreferrer"><img src="/icons/socials/youtube-123.svg"></img></a>
   </div>
 </div>
 </div>

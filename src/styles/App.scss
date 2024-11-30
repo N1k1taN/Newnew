@@ -52,6 +52,11 @@ top: 5%;
   background-color:$header-color;
   z-index: 100;
   }
+  .senderbutt:hover{
+    background-color: $white-color;
+    color: $black-text;
+    outline: 2px solid $black-color;
+}
   .linked{
     color: $white-text;
     transition: all ease-in-out 0.6s;
@@ -380,6 +385,13 @@ margin-bottom: 20px;
     height: 45px;
       border: solid 1px #4b5320;
   }
+
+  .closepopup{
+    position: relative;
+    top: 3%;
+    left: 47%;
+    padding-bottom: 30PX;
+  }
   .exitcall{
     position: fixed;
     width: 100%;
@@ -398,27 +410,28 @@ margin-bottom: 20px;
   }
   
   .senderbutt{
-    border-radius: 12px;
-      background-color: rgba(255, 204, 0, 1);
-      border: none;
-     color:rgba(29, 29, 27, 1);
-      padding: 16px 90px;
-      text-align: center;
-     text-decoration: none;
-     font-weight: 700;
-      display: inline-block;
-    cursor: pointer;
+    display: flex; /* Устанавливаем flexbox */
+    align-items: center; /* Центрируем содержимое по вертикали */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
+    cursor: pointer; /* Указатель мыши при наведении */
+    gap: 10px; /* Расстояние между текстом и иконкой */
+    background-color: #E92C0C;
+    border: none;
+    color: #F2F2F2;
+    padding: 1px 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 900;
     -webkit-transition: all 0.3s;
-    margin-bottom: 10px;
+    margin-top: 2.5%;
     }
     .navbar>div>.butcall{
       margin: 0px 0px 0px 0px;
       padding: 16px 32px;
   }
   
-    .senderbutt:hover{
-        background-color: rgba(255, 204, 0, 0.85);
-    }
+
 
     :root{
         --swiper-theme-color:none;
@@ -770,7 +783,7 @@ margin-top: 20px;
   position: fixed;
   top: 85%;
   right: 10%;
-  background-color: #ADFF2F	;
+  background-color: $accent-color	;
   text-decoration: none;
   height: 60px;
   width: 60px;
@@ -782,18 +795,12 @@ margin-top: 20px;
   cursor: pointer;
 z-index: 90;}
 .pgd{
+  flex-direction: column;
+  display: flex;
   position: fixed;
-  background-color: white;
-  height: 450px;
-  width: 360px;
-  padding: 20px 30px 40px 30px;
-  top: 35%;
-  border-radius: 8px;
-  right: 12%;
+  top: 60%;
+  right: 9.5%;
   z-index: 90;
-  -webkit-box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75);
--moz-box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75);
-box-shadow: 1px 2px 10px 1px rgba(0,0,0,0.75)
 }
 .Ownerb{
 width: 25%;
@@ -942,6 +949,7 @@ font-weight: bold;}
 .thx{
   vertical-align: center;
     padding: 40px;
+    padding-top: 0px;
   text-align: center;
 }
 .thx>p:nth-child(1){
@@ -987,13 +995,27 @@ cursor: pointer;
 margin-bottom: 30px;
 }
 .emailpng{
+  height: 240px;
+  object-fit: contain;
+}
+form>p{
   width: 100%;
-  height: 450px;
-  object-fit: fill;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+form>div>input{
+  width:  430px;
+padding: 18px 25px 18px 25px;
+gap: 0px;
+border: 0.5px 0px 0px 0px;
+opacity: 0px;
+
+}
+form>div{
+  padding-top: 25px;
 }
 .callpage{
-  border-radius: 12PX;
-  width: 550px;
+  width: 500px;
   border: none;
 }
 .Onastext{
@@ -1032,7 +1054,7 @@ width: 32%;
   top: 78px;
   padding: 18px 25px 18px 25px;
   gap: 0px;
-  opacity: 0px;
+  opacity: 0.9;
   border: none;
   box-shadow: 0px 8px 32px 0px rgba(0,0,0,0.27)
 
@@ -1079,6 +1101,34 @@ width: 32%;
 .footer-info>div{
   width: 20%;
   margin: 10px;
+}
+.pgd>a{
+padding-top: auto;
+padding: 5px 12px;
+    align-self: center;
+    border-radius: 24px;
+    margin: 5px;
+
+}
+.pgd>a:nth-child(1){
+  background-color: #7360f2;
+}
+.pgd>a:nth-child(1){
+  background-color: #7360f2;
+}
+.pgd>a:nth-child(2){
+  background-color: rgb(255, 255, 255);
+}
+.pgd>a:nth-child(3){
+  background-color: #24A1DE;
+}
+.pgd>a:nth-child(4){
+  background-color: #25D366
+  ;
+}
+.pgd>a>img{
+  width: 32px;
+  height: 32px;
 }
 
 .footer-info>img{
@@ -1263,6 +1313,19 @@ margin: 10px !important;}
   padding-right: 1%;
   padding-top: 20%;
   
+}
+.callpage{
+  width: 350px;
+}
+.callpage > form > div > input{
+  width: 300px;
+}
+.senderbutt{
+  padding: 2px 10px;
+}
+.closepopup{
+  left: 43%;
+  font-size: 50px;
 }
 .info>h2{
 font-family: Montserrat;

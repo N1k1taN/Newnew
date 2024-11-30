@@ -32,11 +32,10 @@ const Accordions = () => {
         visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
       }}
     >
-      <Accordion.Root className="AccordionRoot" type="multiple" collapsible>
+      <Accordion.Root className="AccordionRoot" type="multiple" collapsible="true">
         <Accordion.Item className="AccordionItem" value="item-1">
           <AccordionTrigger className="dirk">
             <div
-              onClick={() => handleLinkClick('/vidstrochka')}
               style={{ cursor: 'pointer' }}
               className='font-h3'
             >
@@ -52,7 +51,7 @@ const Accordions = () => {
               <h2 className='font-h3'>- Супровід адвоката до ТЦК та СП.</h2>
               <h2 className='font-h3'>- Оскарження штрафів ТЦК та СП.</h2>
               <h2 className='font-h3'>- Незаконна мобілізація.</h2>
-              <a className='linkbutton font-h3' href=''>Детальніше</a>
+              <a className='linkbutton font-h3'onClick={() => handleLinkClick('/vidstrochka')}>Детальніше</a>
             </div>
           </AccordionContent>
         </Accordion.Item>
@@ -60,7 +59,6 @@ const Accordions = () => {
         <Accordion.Item className="AccordionItem" value="item-2">
           <AccordionTrigger>
             <div
-              onClick={() => handleLinkClick('/zvilnenyasviskovoi')}
               style={{ cursor: 'pointer' }}
               className='font-h3'
 
@@ -73,6 +71,8 @@ const Accordions = () => {
               <h2 className='font-h3'>- За сімейними обставинами.</h2>
               <h2 className='font-h3'>- За станом здоров'я.</h2>
               <h2 className='font-h3'>- За необхідністю здійснення догляду за своїми батьками чи дружиною.</h2>
+              <a className='linkbutton font-h3'              onClick={() => handleLinkClick('/zvilnenyasviskovoi')}
+              >Детальніше</a>
             </div>
           </AccordionContent>
         </Accordion.Item>
@@ -80,7 +80,6 @@ const Accordions = () => {
         <Accordion.Item className="AccordionItem" value="item-3">
           <AccordionTrigger>
             <div
-              onClick={() => handleLinkClick('/oskargenyavlk')}
               style={{ cursor: 'pointer' }}
               className='font-h3'
             >
@@ -92,6 +91,7 @@ const Accordions = () => {
               <h2 className='font-h3'>- Призначення ВЛК у зв'язку з погіршенням стану здоровʼя.</h2>
               <h2 className='font-h3'>- Оскарження ВЛК у зв'язку з не вірним висновком про ступень здоров’я до військової служби.</h2>
               <h2 className='font-h3'>- Оскарження ВЛК у зв'язку з не вірним причинним зв'язком травми, захворювання.</h2>
+              <a className='linkbutton font-h3'              onClick={() => handleLinkClick('/oskargenyavlk')} >Детальніше</a>
             </div>
           </AccordionContent>
         </Accordion.Item>
@@ -101,7 +101,6 @@ const Accordions = () => {
             <div
                           className='font-h3'
 
-              onClick={() => handleLinkClick('/statusubd')}
               style={{ cursor: 'pointer' }}
             >
               ОТРИМАННЯ СТАТУСУ УЧАСНИКА БОЙОВИХ ДІЙ
@@ -111,6 +110,7 @@ const Accordions = () => {
             <div className="AccordionContentText">
               <h2 className='font-h3'>- Витребування документів для призначення статусу УБД.</h2>
               <h2 className='font-h3'>- Подача заяви на комісію з питань призначення статусу учасника бойових дій.</h2>
+              <a className='linkbutton font-h3'  onClick={() => handleLinkClick('/statusubd')} >Детальніше</a>
             </div>
           </AccordionContent>
         </Accordion.Item>
@@ -119,7 +119,6 @@ const Accordions = () => {
           <AccordionTrigger>
             <div
                           className='font-h3'
-              onClick={() => handleLinkClick('/groshovezabez')}
               style={{ cursor: 'pointer' }}
             >
               ПРИЗНАЧЕННЯ ВИПЛАТИ ВІЙСЬКОВОСЛУЖБОВЦЯМ ТА ЇХ СІМ'ЯМ
@@ -132,6 +131,7 @@ const Accordions = () => {
               <h2 className='font-h3'>- Призначення одноразової грошової допомоги у зв'язку з отриманням групи інвалідності.</h2>
               <h2 className='font-h3'>- Призначення одноразової грошової допомоги у зв'язку із загибеллю військовослужбовця.</h2>
               <h2 className='font-h3'>- Призначення виплати сім'ям військовослужбовців, які перебувають у полоні або зниклі безвісти.</h2>
+              <a className='linkbutton font-h3' onClick={() => handleLinkClick('/groshovezabez')}>Детальніше</a>
             </div>
           </AccordionContent>
         </Accordion.Item>

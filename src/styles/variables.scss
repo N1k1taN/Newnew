@@ -156,10 +156,18 @@ text-decoration-skip-ink: none;
     text-decoration: none;
     letter-spacing: 0.0px;
   }
+  .font-h5 {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130.0%;
+    text-decoration: none;
+    letter-spacing: 2.0%;
+  }
 }
 
 // Mobile styles
-@media (max-width: 767px) {
+@media (max-width: 768px) {
   .font-main-header {
     font-family: 'Bold';
     font-weight: 700;
@@ -214,6 +222,14 @@ text-decoration-skip-ink: none;
     font-size: 30px;
     text-decoration: none;
     letter-spacing: 0.0px;
+  }
+  .font-h5 {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 130.0%;
+    text-decoration: none;
+    letter-spacing: 2.0%;
   }
 }
 
