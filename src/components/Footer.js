@@ -6,8 +6,8 @@ import React from "react";
 const Footer=()=> {    
 return<div className="footer">
 <div className="footer-info">
-  <img src="/icons/logo.png"></img>
-  <div className="contact">
+<div className="footer-img"></div>
+<div className="contact">
   <h2 className="font-h2">Контакти</h2>
   <h3 className="font-h4"><img></img>+380937452557</h3>
   <h3 className="font-h4"><img></img>nlawcompany@gmail.com</h3>

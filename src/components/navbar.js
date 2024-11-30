@@ -22,13 +22,7 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <Link href="/#home" className="logoname">
-        <Image
-          src="/icons/logo.png"
-          alt="logo"
-          width={170}
-          height={63}
-          objectFit="contain"
-        />
+
       </Link>
       <a href="/#help" className="linked font-menu" onClick={(e) => handleSmoothScroll(e, "/#help")}>ПОСЛУГИ</a>
       <a href="/#case" className="linked font-menu" onClick={(e) => handleSmoothScroll(e, "/#case")}>КЕЙСИ</a>
@@ -37,7 +31,7 @@ const Navbar = () => {
       </Link>
       <a href="/#vidguk" className="linked font-menu" onClick={(e) => handleSmoothScroll(e, "/#vidguk")}>ВІДГУКИ</a>
       <a href="/#contacts" className="linked font-menu" onClick={(e) => handleSmoothScroll(e, "/#contacts")}>КОНТАКТИ</a>
-      <a href="" className="linked font-numbers">+380506598496</a>
+      <p href="" className="linked d font-numbers">+380506598496</p>
       <Dropdown></Dropdown>
     </div>
   );

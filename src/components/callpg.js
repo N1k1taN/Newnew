@@ -30,12 +30,10 @@ const Callpg = () => {
     <div>
       {isMobile ? (
         <a className='buttonfast' href="tel:+380937452557">
-          <img alt="logo"src="/icons/call.png"></img>
         </a>
       ) : (
         <>
         <button className='buttonfast' onClick={toggleMenu}>
-          <img alt="phone"src="/icons/call.png"></img>
           </button>
           {menuOpen && (
             <div className='pgd'>
