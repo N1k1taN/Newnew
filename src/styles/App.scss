@@ -507,15 +507,13 @@ margin-bottom: 20px;
 
       
       .dropdown-menu {
-        padding-top: 15px;
         width: 100%;
         list-style: none;
-        padding: 0;
         display: block;
         position: fixed;
-        top: -6%;
-        margin-top: 60px;
+        top: 0%;
         z-index: 1;
+        padding-top: 67px;
         left: 0;
         color: white;
       }
@@ -523,7 +521,7 @@ margin-bottom: 20px;
 
     
       ul{
-        height: 100vh !important;
+        height: calc(100vh + 80px) !important;
         background-image: url(/icons/camo.png);
         border: none;
       }
@@ -915,7 +913,7 @@ ul>.dad{
   padding-top: 20px;
 }
 ul>.dad:nth-child(1){
-  padding-top: 120px;
+  padding-top: 70px;
 }
 
 
@@ -1537,6 +1535,9 @@ right: 33%;
     background-image: url(/icons/Ownerbmob.png);
     width: 285px;
     height: 300px;
+  }
+  .form-content{
+    width: 85%;
   }
 
   #swiper1>img{
