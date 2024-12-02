@@ -592,7 +592,7 @@ margin-bottom: 20px;
     }
 
 .slide-text {
-  text-align: center;
+  height: 150px !important;
   margin-left: 2px;
   margin-top: 10px;
   color: #333;
@@ -666,12 +666,15 @@ margin-bottom: 20px;
 
 .swiper-slide-zoomed{z-index: 15;}
 #swiper1>img{
-  width: 100%;
-  height: 600px;
+  width: 413px;
+  height: 500px;
   object-fit: contain;
 }
 .swiper-zoom-container>.imgcont{
   object-fit: contain;
+}
+.Sliderres{
+  width: 413px;
 }
 
 .swiper-container {
@@ -683,7 +686,11 @@ margin-bottom: 20px;
   transition: transform 0.3s ease; /* Плавность анимации */
 }
 .swiper2 img {
-  height: 360; /* Устанавливаем высоту изображения */
+  object-fit: contain; /* Гарантируем, что изображение корректно впишется */
+}
+.swiper2 img {
+  height: 360px; /* Устанавливаем высоту изображения */
+  width: 480px !important;
   object-fit: contain; /* Гарантируем, что изображение корректно впишется */
 }
 
@@ -1362,11 +1369,18 @@ object-fit: contain;
   width: 30%!important;
 }
 #swiper1>img{
-  width: 100%;
-  height: 860px;
+  width: 317px;
+  height: 369px;
   object-fit: fill;
 }
 .slide-text{
+  height: 120px !important;
+}
+.Sliderres{
+  width: 317px;
+}
+.slide-text{
+  padding: 2px;
   margin-top: 8px;
 }
 .logoname{
@@ -1523,6 +1537,22 @@ right: 33%;
     background-image: url(/icons/Ownerbmob.png);
     width: 285px;
     height: 300px;
+  }
+
+  #swiper1>img{
+    width: 317px;
+    height: 340px;
+    object-fit: contain;
+  }
+  .mainpage{
+    background-position: 73%;
+
+  }
+  .slide-text{
+    height: 120px !important;
+  }
+  .Sliderres{
+    width: 317px;
   }
   .panelrech{
     align-items: center;

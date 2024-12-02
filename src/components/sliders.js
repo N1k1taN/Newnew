@@ -12,10 +12,11 @@ import { useInView } from 'react-intersection-observer';
 const CaseResults = () => {
   const { ref: sectionRef, inView: isVisible } = useInView({ triggerOnce: true, threshold: 0.3 });
   const resultSlides = [
-    { imgSrc: '/icons/res/res1.webp', text: 'Юристи NLAW Company, успішно отримали відстрочку для клієнта на підставі наявності дружини з ІІ групою інвалідності' },
-    { imgSrc: '/icons/res/res2.webp', text: 'Юристи NLAW Company, успішно отримали оформили відстрочку для клієнта, який являється науковим співробітником' },
-    { imgSrc: '/icons/res/res3.webp', text: 'Юристи NLAW Company, успішно отримали відстрочку для клієнта на підставі наявності дружини з ІІ групою інвалідності' },
-    { imgSrc: '/icons/res/res4.webp', text: 'Юристи NLAW Company успішно виправили недостовірні відомості в «Резерв+», щодо військовозобовʼязаного, який має бути виключений з військового обліку' },
+    { imgSrc: '/icons/res/res1.png', text: 'Юристи NLAW Company, успішно отримали відстрочку для клієнта на підставі наявності дружини з ІІ групою інвалідності.' },
+    { imgSrc: '/icons/res/res2.png', text: 'Юристи NLAW Company успішно виправили недостовірні відомості в «Резерв+», щодо військовозобовʼязаного, який має бути виключений з військового обліку.' },
+    { imgSrc: '/icons/res/res3.png', text: 'Юристи NLAW Company успішно отримали відстрочку для клієнта на підставі утриманні трьох неповнолітніх дітей, не дивлячись на те, що клієнт мав дітей від різних жінок.' },
+    { imgSrc: '/icons/res/res4.png', text: 'Юристи NLAW Company успішно отримали оформили відстрочку для клієнта, який являється науковим співробітником.' },
+    { imgSrc: '/icons/res/res5.png', text: 'Юристи NLAW Company успішно отримали відстрочку для клієнта на підставі вихованні дитини з інвалідністю віком до 18 років.' },
   ];
   const [resultActiveIndex, setResultActiveIndex] = useState(0);
 
@@ -31,11 +32,11 @@ const CaseResults = () => {
       <Swiper
   modules={[Navigation, Pagination, Zoom]}
   centeredSlides={true}
-  spaceBetween={10}
-  slidesPerView={1.1}
+  spaceBetween={50}
+  slidesPerView="auto" // Автоматическая подгонка ширины слайдов
   loop={true} // Включаем бесконечный режим
   loopFillGroupWithBlank={false} // Убираем пустые места
-  initialSlide={1}
+  initialSlide={0}
   pagination={{ clickable: true }}
   navigation={{
     nextEl: '.swiper-button-next',
@@ -45,12 +46,12 @@ const CaseResults = () => {
   zoom={true}
   breakpoints={{
     1100: {
-      slidesPerView: 3,
+      spaceBetween: 150, // Исправлено: используется двоеточие
     },
   }}
 >
   {resultSlides.map((slide, index) => (
-    <SwiperSlide key={index}>
+    <SwiperSlide className='Sliderres' key={index}>
       <div className="swiper-zoom-container" id='swiper1'>
         <img src={slide.imgSrc} alt={slide.text} />
       </div>
@@ -67,10 +68,10 @@ const CaseResults = () => {
 const Comments = () => {
   const { ref: commentsRef, inView: isVisible } = useInView({ triggerOnce: true, threshold: 0.3 });
   const slides = [
-    { imgSrc: '/icons/vidguk/photo_2024-09-29_16-33-13.jpg' },
-    { imgSrc: '/icons/vidguk/photo_2024-09-29_16-34-10.jpg' },
-    { imgSrc: '/icons/vidguk/photo_2024-09-29_16-34-16.jpg' },
-    { imgSrc: '/icons/vidguk/vidguk4.webp' },
+    { imgSrc: '/icons/vidguk/vidg1.png' },
+    { imgSrc: '/icons/vidguk/vidg2.png' },
+    { imgSrc: '/icons/vidguk/vidg3.png' },
+    { imgSrc: '/icons/vidguk/vidg4.png' }
   ];
   const [activeIndex, setActiveIndex] = useState(2);
 
@@ -86,24 +87,23 @@ const Comments = () => {
       <h2 className='font-h1'>ВІДГУКИ</h2>
       <span className='font-h3'>Одна із вищих нагород для нас це відгук задоволеного клієнта!</span>
       <Swiper
-        modules={[Navigation, Pagination, Zoom]}
-        centeredSlides={true}
-        spaceBetween={50}
-        slidesPerView={1}
-        initialSlide={2}
-        loop={true} // Включаем бесконечный режим
-        loopFillGroupWithBlank={false} // Убираем пустые места
-        pagination={{ clickable: true }}
+  modules={[Navigation, Pagination, Zoom]}
+  centeredSlides={true}
+  spaceBetween={10}
+  slidesPerView={1.6}
+  loop={true} // Включаем бесконечный режим
+  loopFillGroupWithBlank={false} // Убираем пустые места
+  initialSlide={0}
+  pagination={{ clickable: true }}
         navigation={{
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         }}
         allowTouchMove={true}
         zoom={true}
-        loop={true}
         breakpoints={{
           1100: {
-            slidesPerView: 3,
+            slidesPerView: 2.6,
           },
         }}
         onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}

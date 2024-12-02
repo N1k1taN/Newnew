@@ -3,7 +3,9 @@ import "../../styles/App.scss"
 import "../../styles/about.scss";
 import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
-import Image from "next/image";
+import Image from "next/image";''
+import { Comments } from "@/components/sliders";
+import Messenger from "@/components/messenger";
 
 export const metadata = {
   title: "Військовий Адвокат - Відстрочка від Мобілізації | Юридична Допомога",
@@ -42,29 +44,38 @@ function Vidstrochka() {
 <Callpg></Callpg>
       <div className="alde">
       <div className="about">
-        <h1 className="font-h1">Відстрочка від мобілізації</h1>
+        <h1 className="font-h1">ВІДСТРОЧКА ВІД МОБІЛІЗАЦІЇ</h1>
         <hr></hr>
-        <h2 className="font-h2">Відстрочка від військової служби є правом особи, яка повинна його використати за наявністю законних підстав, зокрема:</h2>
+        <h2 className="font-h5">ВІДСТРОЧКА ВІД ВІЙСОВОЇ СЛУЖБИ Є ПРАВОМ ОСОБИ, ЯКА ПОВИННА ЙОГО ВИКОРИСТАТИ ЗА НАЯВНІСТЮ ПІДСТАВ, ЗОКРЕМА:</h2>
 <div className="about-main">
-<div className="about-text">
+<div className="p-text-enb">
 <p className="font-text-18px-regular">-За сімейними обставинами </p>
 <p className="font-text-18px-regular">-Наявністю інвалідності</p>
 <p className="font-text-18px-regular">-Навчання у вищому закладі </p>
+</div>
+<div className="about-text">
+  <div className="p-text-dis">
+<p className="font-text-18px-regular">-За сімейними обставинами </p>
+<p className="font-text-18px-regular">-Наявністю інвалідності</p>
+<p className="font-text-18px-regular">-Навчання у вищому закладі </p>
+</div>
 <p className="font-text-18px-regular textbeg">Ні для кого не секрет, що ТЦК та СП не завжди об&#39;єктивно оцінює законні підстави для надання відстрочки та намагається мобілізувати військовозобов&#39;язаного, навіть який подав заяву для отримання відстрочки.
 </p>
 <p className="font-text-18px-regular">Наша команда має досвід підходу до даного питання та його вирішення навіть у кризових ситуаціях.</p>
 <OpenMenuButton></OpenMenuButton>
 </div>
 <Image
- src="/icons/vidstr.webp"  
+ src="/icons/vidstr.png"  
  alt="Відстрочка від мобілізації"
-  width={300}
-  height={300}
+  width={464}
+  height={366}
   priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
 
       /> 
 
 </div>
+<Comments></Comments>
+<Messenger></Messenger>
       </div>
       </div>
     </div>

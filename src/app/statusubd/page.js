@@ -4,6 +4,8 @@ import "../../styles/about.scss";
 import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
 import Image from "next/image";
+import { Comments } from "@/components/sliders";
+import Messenger from "@/components/messenger";
 
 
 export const metadata = {
@@ -37,27 +39,41 @@ function Statusubd() {
 
   return (
     <div>
-<Callpg></Callpg>
-      <div className="alde">
-      <div className="about">
-        <h1>Отримання статусу УБД</h1>
-        <Image
- src="/icons/ubd.webp"  
- alt="Статус УБД"
-  width={500}
-  height={300}
-  layout="responsive"  // делает изображение адаптивным
-  priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
-
-      />          <h3>Зокрема підставами отримання статусу учасника бойових дій є:</h3>
-<p>-Перебування у зоні бойових дій </p>
-<p>-Отримання поранення під час захисту Батьківщини</p>
-<p>Статус учасника бойових дій дає змогу отримати соціальні пільги військовослужбовцям, навіть тим, які звільненні в запас та членам його сімей.</p>
-<p>Наша команда, вже допомогла не одному десятку військовослужбовців з даного питання.</p>
-<OpenMenuButton></OpenMenuButton>
-      </div>
-      </div>
+    <Callpg></Callpg>
+          <div className="alde">
+          <div className="about">
+            <h1 className="font-h1">ОТРИМАННЯ СТАТУСУ УБД</h1>
+            <hr></hr>
+            <h2 className="font-h5">ПІДСТАВАМИ ДЛЯ ОТРИМАННЯ СТАТУСУ УЧАСНИКА БОЙОВИХ ДІЙ (УБД) Є:</h2>
+    <div className="about-main">
+    <div className="p-text-enb">
+    <p className="font-text-18px-regular">- Перебування у зоні бойових дій.</p>
+    <p className="font-text-18px-regular">- Отримання поранення під час захисту Батьківщини.</p>
     </div>
+    <div className="about-text">
+      <div className="p-text-dis">
+    <p className="font-text-18px-regular">- Перебування у зоні бойових дій. </p>
+    <p className="font-text-18px-regular">- Отримання поранення під час захисту Батьківщини.</p>
+    </div>
+    <p className="font-text-18px-regular textbeg">Статус учасника бойових дій дає змогу отримати соціальні пільги військовослужбовцям, навіть тим, які звільненні в запас та членам його сімей. Наша команда вже допомогла не одному десятку військовослужбовців з даного питання.
+    </p>
+    <OpenMenuButton></OpenMenuButton>
+    </div>
+    <Image
+     src="/icons/ubd.png"  
+     alt="Відстрочка від мобілізації"
+      width={464}
+      height={366}
+      priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
+    
+          /> 
+    
+    </div>
+    <Comments></Comments>
+    <Messenger></Messenger>
+          </div>
+          </div>
+        </div>
   );
 }
 

@@ -4,6 +4,8 @@ import "../../styles/about.scss";
 import OpenMenuButton from "../../components/callpage";
 import Callpg from "../../components/callpg";
 import Image from "next/image";
+import { Comments } from "@/components/sliders";
+import Messenger from "@/components/messenger";
 export const metadata = {
   title: "Військовий Адвокат - Оскарження Рішення ВЛК | Юридична Допомога",
   description: "NLAW Company надає допомогу у оскарженні рішень військово-лікарської комісії (ВЛК). Консультації, юридичний супровід, підтримка військових.",
@@ -35,29 +37,49 @@ function Oskargenyavlk() {
 
   return (
     <div>
-        <Callpg></Callpg>
+<Callpg></Callpg>
       <div className="alde">
       <div className="about">
-        <h1>Оскарження рішення ВЛК</h1>
-        <Image
+        <h1 className="font-h1">ОСКАРЖЕННЯ РІШЕННЯ ВЛК</h1>
+        <hr></hr>
+        <h2 className="font-h5">РІШЕННЯ ВІЙСЬКОВО-ЛІКАРСЬКОЇ КОМІСІЇ ПІДЛЯГАЄ ОСКАРЖЕННЮ В НАСТУПНИХ ВИПАДКАХ:</h2>
+<div className="about-main">
+<div className="p-text-enb">
+<p className="font-text-18px-regular">- Необ'єктивність лікарської комісії. </p>
+<p className="font-text-18px-regular">- Порушення процедури проведення ВЛК.</p>
+<p className="font-text-18px-regular">- Не вірне застосування законодавства військово
+лікарською комісією.</p>
+<p className="font-text-18px-regular">- Незаконне рішення ВЛК.</p>
+<p className="font-text-18px-regular">- Помилковий причинний звʼязок захворювання (травми).</p>
+<p className="font-text-18px-regular">- Не вірно вказана ступень тяжкості поранення.</p>
+</div>
+<div className="about-text">
+  <div className="p-text-dis">
+<p className="font-text-18px-regular">- Необ'єктивність лікарської комісії. </p>
+<p className="font-text-18px-regular">- Порушення процедури проведення ВЛК.</p>
+<p className="font-text-18px-regular">- Не вірне застосування законодавства військово
+лікарською комісією.</p>
+<p className="font-text-18px-regular">- Незаконне рішення ВЛК.</p>
+<p className="font-text-18px-regular">- Помилковий причинний звʼязок захворювання (травми).</p>
+<p className="font-text-18px-regular">- Не вірно вказана ступень тяжкості поранення.</p>
+</div>
+<p className="font-text-18px-regular textbeg">Не рідко військово - лікарська комісія упереджено та не обʼєктивно проводить огляд військового або військо-возобовʼязаного, внаслідок чого приймає незаконне рішення. Тому, в ході оскарження рішення ВЛК наша 
+команда фахівців, яку очолює адвокат з медичного права, залучає лікарів, для написання максимально якісної заяви на перегляд рішення ВЛК.
+</p>
+<OpenMenuButton></OpenMenuButton>
+</div>
+<Image
  src="/icons/vislav.webp"  
- alt="Оскарження рішення ВЛК"
-  width={500}
-  height={300}
-  layout="responsive"  // делает изображение адаптивным
+ alt="Відстрочка від мобілізації"
+  width={464}
+  height={366}
   priority={true}      // указывает, что изображение должно загружаться с высоким приоритетом
 
-      />  
-        <h3>Рішення військово - лікарської комісії підлягає оскарженню в наступних випадках:</h3>
-<p>-Необ&#39;єктивність лікарської комісії </p>
-<p>-Порушення процедури проведення ВЛК</p>
-<p>-Не вірне застосування законодавства військово - лікарською комісією </p>
-<p>-Незаконне рішення ВЛК</p>
-<p>-Помилковий причинний звʼязок захворювання (травми) </p>
-<p>-Не вірно вказана ступень тяжкості поранення</p>
-<p>Не рідко військово - лікарська комісія упереджено та не обʼєктивно проводить огляд військового або військовозобовʼязаного, внаслідок чого приймає незаконне рішення.</p>
-<p>Тому, в ході оскарження рішення ВЛК наша команда фахівців, яку очолює адвокат з медичного права, залучає лікарів, для написання максимально якісної заяви на перегляд рішення ВЛК.</p>
-<OpenMenuButton></OpenMenuButton>
+      /> 
+
+</div>
+<Comments></Comments>
+<Messenger></Messenger>
       </div>
       </div>
     </div>
