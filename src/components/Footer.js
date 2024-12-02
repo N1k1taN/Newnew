@@ -9,8 +9,8 @@ return<div className="footer">
 <div className="footer-img"></div>
 <div className="contact">
   <h2 className="font-h2">Контакти</h2>
-  <h3 className="font-h4"><img></img>+380937452557</h3>
-  <h3 className="font-h4"><img></img>nlawcompany@gmail.com</h3>
+  <a className="font-h4"><img></img>+380937452557</a>
+  <a className="font-h4"><img></img>nlawcompany@gmail.com</a>
   </div>
 <div className="grafik">
 <h2 className="font-h2">Графік</h2>
@@ -33,7 +33,7 @@ return<div className="footer">
 </div>
 </div>
 <div className="footer-end">
-  <h3 className="font-h3">© 2024 NLaw Company | Усі права захищено.   Код ЄДРПОУ:45432286</h3>
+  <h3 className="font-h3">© 2024 NLAW Company | Усі права захищено.   Код ЄДРПОУ:45432286 ТОВ «НАУМЕНКО ЮК»</h3>
 </div>
 </div>
 }
