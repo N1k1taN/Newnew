@@ -108,7 +108,7 @@ const Dropdown = () => {
               <a href="/#case" className="linked font-menu-menu" onClick={(e) => { handleSmoothScroll(e, '/#case'); }}>Кейси</a>
             </li>
             <li className="dad">
-              <a href="/#contacts" className="linked font-menu-menu" onClick={(e) => { handleSmoothScroll(e, '/#contacts'); }}>Контакти</a>
+              <a href="/#contate" className="linked font-menu-menu" onClick={(e) => { handleSmoothScroll(e, '/#contate'); }}>Контакти</a>
             </li>
             <li className="dad">
               <a className="phonebutton font-menu-tel" href="tel:+380937452557">+380937452557</a>

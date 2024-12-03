@@ -30,7 +30,7 @@ const Navbar = () => {
         ПРО НАС
       </Link>
       <a href="/#vidguk" className="linked font-menu" onClick={(e) => handleSmoothScroll(e, "/#vidguk")}>ВІДГУКИ</a>
-      <a href="/#contacts" className="linked font-menu" onClick={(e) => handleSmoothScroll(e, "/#contacts")}>КОНТАКТИ</a>
+      <a href="/#contate" className="linked font-menu" onClick={(e) => handleSmoothScroll(e, "/#contate")}>КОНТАКТИ</a>
       <p href="" className="linked d font-numbers">+380506598496</p>
       <Dropdown></Dropdown>
     </div>

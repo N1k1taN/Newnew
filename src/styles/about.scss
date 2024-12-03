@@ -38,6 +38,7 @@ hr{
     color: $accent-color;
 }
 .about-main>img{
+    margin-left: 7%;
     object-fit: contain;
 
 }
@@ -146,7 +147,9 @@ padding: 15px;
     padding-bottom: 30px;
 }
 .textbeg{
+    padding-right: 30px;
     padding-top: 30px;
+    padding-bottom: 15px;
   }
 #dykg{
 padding: 20px;
@@ -184,6 +187,7 @@ padding: 20px;
         padding-bottom: 3%;
     }
     .about-main>img{
+        margin: 0;
         order: -1;
         width: 310px;
         height: 280px;
