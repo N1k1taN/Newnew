@@ -21,7 +21,7 @@ const OpenMenuButton = () => {
 
   return (
     <div>
-      <button className="butcall font-semibold-16px" onClick={openMenu}>
+      <button className="butcall font-but1" onClick={openMenu}>
         ЗАМОВИТИ КОНСУЛЬТАЦІЮ
       </button>
       {isMenuOpen && (

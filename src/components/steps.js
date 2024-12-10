@@ -130,17 +130,17 @@ const Steps = () => {
           </motion.div>
         </div>
         <div className="steps-text">
-          <h3 className="font-h4-20px-regular">
+          <h3 className="font-text1">
             Обговоримо справу, проаналізуємо перспективи та ризики.
           </h3>
-          <h3 className="font-h4-20px-regular">Увійдемо на будь-якому етапі справи.</h3>
-          <h3 className="font-h4-20px-regular">
+          <h3 className="font-text1">Увійдемо на будь-якому етапі справи.</h3>
+          <h3 className="font-text1">
             Досконально вивчимо суть Вашої ситуації, врахуємо всі наявні обставини.
           </h3>
-          <h3 className="font-h4-20px-regular">
+          <h3 className="font-text1">
             Надамо стратегію, запропонуємо шляхи вирішення справи та план дій.
           </h3>
-          <h3 className="font-h4-20px-regular">
+          <h3 className="font-text1">
             Здійснюємо правовий захист та відстоювання Ваших інтересів.
           </h3>
         </div>

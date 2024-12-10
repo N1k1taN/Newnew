@@ -63,16 +63,16 @@ function Homepage() {
         <div className='achievment'>
 <div className='achiv'>
   <p className='font-numbers pnumber'>2000+</p>
-  <p className='font-h4'>консультацій проведених нашими спеціалістами 
+  <p className='font-text1'>консультацій проведених нашими спеціалістами 
   по всій Україні.</p>
 </div>
 <div className='achiv'>
 <p className='font-numbers pnumber'>7+</p>
-  <p className='font-h4'>років практичного досвіду вирішення юридичних питань.</p>
+  <p className='font-text1'>років практичного досвіду вирішення юридичних питань.</p>
 </div>
 <div className='achiv'>
 <p className='font-numbers pnumber'>400+</p>
-  <p className='font-h4'>проведено більше 400 справ клієнтів.</p>
+  <p className='font-text1'>проведено більше 400 справ клієнтів.</p>
 </div>
 </div>
       </div>
@@ -80,7 +80,7 @@ function Homepage() {
       <div className="main">
       
         <div className="help" id="help">
-          <h2 className='font-h1'>НАШІ ПОСЛУГИ</h2>
+          <h2 className='font-h3'>НАШІ ПОСЛУГИ</h2>
           <Accordions />
         </div>
         <PanelRech></PanelRech>

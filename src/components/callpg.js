@@ -47,7 +47,6 @@ const Callpg = () => {
       e.preventDefault();
       window.location.href = "intent://chat?number=%2B380937452557#Intent;scheme=viber;package=com.viber.voip;end";
     } else if (userAgent.includes('ios')) {
-      window.location.href = "https://apps.apple.com/app/id382617920";
     } else {
       window.location.href = "https://www.viber.com/";
     }

@@ -44,18 +44,18 @@ function Statusubd() {
           <div className="about">
             <h1 className="font-h1">ОТРИМАННЯ СТАТУСУ УБД</h1>
             <hr></hr>
-            <h2 className="font-h5">ПІДСТАВАМИ ДЛЯ ОТРИМАННЯ СТАТУСУ УЧАСНИКА БОЙОВИХ ДІЙ (УБД) Є:</h2>
+            <h2 className="font-h4">ПІДСТАВАМИ ДЛЯ ОТРИМАННЯ СТАТУСУ УЧАСНИКА БОЙОВИХ ДІЙ (УБД) Є:</h2>
     <div className="about-main">
     <div className="p-text-enb">
-    <p className="font-text-18px-regular">- Перебування у зоні бойових дій.</p>
-    <p className="font-text-18px-regular">- Отримання поранення під час захисту Батьківщини.</p>
+    <p className="font-text2">- Перебування у зоні бойових дій.</p>
+    <p className="font-text2">- Отримання поранення під час захисту Батьківщини.</p>
     </div>
     <div className="about-text">
       <div className="p-text-dis">
-    <p className="font-text-18px-regular">- Перебування у зоні бойових дій. </p>
-    <p className="font-text-18px-regular">- Отримання поранення під час захисту Батьківщини.</p>
+    <p className="font-text2">- Перебування у зоні бойових дій. </p>
+    <p className="font-text2">- Отримання поранення під час захисту Батьківщини.</p>
     </div>
-    <p className="font-text-18px-regular textbeg">Статус учасника бойових дій дає змогу отримати соціальні пільги військовослужбовцям, навіть тим, які звільненні в запас та членам його сімей. Наша команда вже допомогла не одному десятку військовослужбовців з даного питання.
+    <p className="font-text4 textbeg">Статус учасника бойових дій дає змогу отримати соціальні пільги військовослужбовцям, навіть тим, які звільненні в запас та членам його сімей. Наша команда вже допомогла не одному десятку військовослужбовців з даного питання.
     </p>
     <OpenMenuButton></OpenMenuButton>
     </div>

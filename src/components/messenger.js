@@ -9,7 +9,7 @@ import React from 'react';
 const Messenger = () => {
   return (
     <div className='Messenger-block'>
-      <h2 className='font-h1'>ОТРИМАЙТЕ ШВИДКУ КОНСУЛЬТАЦІЮ У ЮРИСТА</h2>
+      <h2 className='font-h3'>ОТРИМАЙТЕ ШВИДКУ КОНСУЛЬТАЦІЮ У ЮРИСТА</h2>
 <div className="messengers" id="contacts">
 <a
   href="viber://chat?number=%2B380937452557"

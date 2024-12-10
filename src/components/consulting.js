@@ -48,16 +48,16 @@ function ConsultationForm() {
 
   return (
     <section className="consultation-form">
-      <h2 className="font-h1">ЗАПИС НА КОНСУЛЬТАЦІЮ</h2>
-      <h3 className="font-h3">
+      <h2 className="font-h3">ЗАПИС НА КОНСУЛЬТАЦІЮ</h2>
+      <h3 className="font-h6">
         ЗАПОВНІТЬ ФОРМУ І МИ ЗВ'ЯЖЕМОСЬ З ВАМИ НАЙБЛИЖЧИМ ЧАСОМ АБО ЗВ'ЯЖІТЬСЯ З НАМИ ЧЕРЕЗ ЗРУЧНИЙ ДЛЯ ВАС
         МЕССЕНДЖЕР
       </h3>
       <div className="form-container">
         {formSubmitted ? (
           <div className="thank-you-message">
-            <p className="font-h3">Дякуємо за Ваше звернення!</p>
-            <p className="font-h3">Ми передзвонимо Вам найближчим часом.</p>
+            <p className="font-h6">Дякуємо за Ваше звернення!</p>
+            <p className="font-h6">Ми передзвонимо Вам найближчим часом.</p>
           </div>
         ) : (
           <form ref={form} onSubmit={sendEmail} className="form-content">
@@ -70,7 +70,7 @@ function ConsultationForm() {
                 id="user-name"
                 placeholder="Ваше ім'я"
                 required
-                className="name-input font-h3"
+                className="name-input font-input"
               />
             </div>
             <div className="form-group">
@@ -85,15 +85,15 @@ function ConsultationForm() {
                 placeholder="Ваш номер телефону"
                 required
                 inputMode="numeric"
-                className="phone-input font-h3"
+                className="phone-input font-input"
               />
-              <span className="star">*</span>
+ {/*              <span className="star">*</span> */}
               </div>
               {phoneError && <p style={{ color: 'red' }}>Неправильний формат номера</p>}
             </div>
             <button
               type="submit"
-              className="butcall font-semibold-16px"
+              className="butcall font-but1"
               id="buttoncons"
             >
               ЗАМОВИТИ КОНСУЛЬТАЦІЮ<img src="/icons/x-solid.svg" alt="icon" />
@@ -112,7 +112,6 @@ function ConsultationForm() {
                 window.location.href =
                   'intent://chat?number=%2B380937452557#Intent;scheme=viber;package=com.viber.voip;end';
               } else if (userAgent.includes('ios')) {
-                window.location.href = 'https://apps.apple.com/app/id382617920';
               } else {
                 window.location.href = 'https://www.viber.com/';
               }

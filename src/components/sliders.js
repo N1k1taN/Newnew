@@ -14,7 +14,7 @@ const CaseResults = () => {
   const resultSlides = [
     { imgSrc: '/icons/res/res1.png', text: 'Юристи NLAW Company, успішно отримали відстрочку для клієнта на підставі наявності дружини з ІІ групою інвалідності.' },
     { imgSrc: '/icons/res/res2.png', text: 'Юристи NLAW Company успішно виправили недостовірні відомості в «Резерв+», щодо військовозобовʼязаного, який має бути виключений з військового обліку.' },
-    { imgSrc: '/icons/res/res3.png', text: 'Юристи NLAW Company успішно отримали відстрочку для клієнта на підставі утриманні трьох неповнолітніх дітей, не дивлячись на те, що клієнт мав дітей від різних жінок.' },
+    { imgSrc: '/icons/res/res3.jpg', text: 'Юристи NLAW Company успішно отримали відстрочку для клієнта на підставі утриманні трьох неповнолітніх дітей, не дивлячись на те, що клієнт мав дітей від різних жінок.' },
     { imgSrc: '/icons/res/res4.png', text: 'Юристи NLAW Company успішно отримали оформили відстрочку для клієнта, який являється науковим співробітником.' },
     { imgSrc: '/icons/res/res5.png', text: 'Юристи NLAW Company успішно отримали відстрочку для клієнта на підставі вихованні дитини з інвалідністю віком до 18 років.' },
   ];
@@ -28,7 +28,7 @@ const CaseResults = () => {
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: 'easeInOut' }}
     >
-      <h2 className='font-h1'> НАШІ РЕЗУЛЬТАТИ:</h2>
+      <h2 className='font-h3'> НАШІ РЕЗУЛЬТАТИ:</h2>
       <Swiper
   modules={[Navigation, Pagination, Zoom]}
   centeredSlides={true}
@@ -55,7 +55,7 @@ const CaseResults = () => {
       <div className="swiper-zoom-container" id='swiper1'>
         <img src={slide.imgSrc} alt={slide.text} />
       </div>
-      <p className="slide-text font-h4">{slide.text}</p>
+      <p className="slide-text font-text3">{slide.text}</p>
     </SwiperSlide>
   ))}
   <div className="swiper-button-next"></div>
@@ -84,8 +84,8 @@ const Comments = () => {
       animate={isVisible ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, ease: 'easeInOut' }}
     >
-      <h2 className='font-h1'>ВІДГУКИ</h2>
-      <span className='font-h3'>Одна із вищих нагород для нас це відгук задоволеного клієнта!</span>
+      <h2 className='font-h3'>ВІДГУКИ</h2>
+      <span className='font-h6'>Одна із вищих нагород для нас це відгук задоволеного клієнта!</span>
       <Swiper
   modules={[Navigation, Pagination, Zoom]}
   centeredSlides={true}

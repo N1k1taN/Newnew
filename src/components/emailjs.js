@@ -54,7 +54,7 @@ function ContactForm({ handleBackgroundClick, callPageRef, handleCloseClick }) {
         transition={{ duration: 0.5, ease: 'easeOut' }}
       >
         <div
-          className="closepopup font-h2"
+          className="closepopup font-h1"
           onClick={handleCloseClick}
           style={{  cursor: 'pointer' }}
         >
@@ -69,9 +69,9 @@ function ContactForm({ handleBackgroundClick, callPageRef, handleCloseClick }) {
         ) : (
           <form ref={form} onSubmit={sendEmail}>
             <img className="emailpng" src="/icons/callpg.png" alt="call" />
-            <h2 className="font-h5">Вже на варті захисту Ваших прав!</h2>
-            <p className="font-text-18px-regular">Залишайте свій номер телефону і ми зателефонуємо Вам на протязі 20 хвилин.</p>
-            <p className="font-semibold-16px">Якщо пізніше, Ви отримаєте знижку 10%</p>
+            <h2 className="font-h4">Вже на варті захисту Ваших прав!</h2>
+            <p className="font-text2">Залишайте свій номер телефону і ми зателефонуємо Вам на протязі 20 хвилин.</p>
+            <p className="font-textbold">Якщо пізніше, Ви отримаєте знижку 10%</p>
             <div>
               <input
                 type="tel"
@@ -79,7 +79,7 @@ function ContactForm({ handleBackgroundClick, callPageRef, handleCloseClick }) {
                 onChange={(e) => setPhoneNumber(e.target.value)}
                 name="phone-number"
                 id="phone-number"
-                className="font-h3"
+                className="font-input"
                 maxLength="12"
                 placeholder="Ваш номер телефону"
                 required
@@ -88,7 +88,7 @@ function ContactForm({ handleBackgroundClick, callPageRef, handleCloseClick }) {
               />
             </div>
             {phoneError && <p style={{ color: 'red' }}>Неправильний формат номера</p>}
-            <button className="senderbutt font-semibold-16px" type="submit">
+            <button className="senderbutt font-but1" type="submit">
               ЗАМОВИТИ КОНСУЛЬТАЦІЮ<img src="/icons/x-solid.svg" alt="icon" />
             </button>
           </form>

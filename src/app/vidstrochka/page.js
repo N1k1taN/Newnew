@@ -46,22 +46,22 @@ function Vidstrochka() {
       <div className="about">
         <h1 className="font-h1">ВІДСТРОЧКА ВІД МОБІЛІЗАЦІЇ</h1>
         <hr></hr>
-        <h2 className="font-h5">ВІДСТРОЧКА ВІД ВІЙСОВОЇ СЛУЖБИ Є ПРАВОМ ОСОБИ, ЯКА ПОВИННА ЙОГО ВИКОРИСТАТИ ЗА НАЯВНІСТЮ ПІДСТАВ, ЗОКРЕМА:</h2>
+        <h2 className="font-h4">ВІДСТРОЧКА ВІД ВІЙСОВОЇ СЛУЖБИ Є ПРАВОМ ОСОБИ, ЯКА ПОВИННА ЙОГО ВИКОРИСТАТИ ЗА НАЯВНІСТЮ ПІДСТАВ, ЗОКРЕМА:</h2>
 <div className="about-main">
 <div className="p-text-enb">
-<p className="font-text-18px-regular">-За сімейними обставинами </p>
-<p className="font-text-18px-regular">-Наявністю інвалідності</p>
-<p className="font-text-18px-regular">-Навчання у вищому закладі </p>
+<p className="font-text2">-За сімейними обставинами </p>
+<p className="font-text2">-Наявністю інвалідності</p>
+<p className="font-text2">-Навчання у вищому закладі </p>
 </div>
 <div className="about-text">
   <div className="p-text-dis">
-<p className="font-text-18px-regular">-За сімейними обставинами </p>
-<p className="font-text-18px-regular">-Наявністю інвалідності</p>
-<p className="font-text-18px-regular">-Навчання у вищому закладі </p>
+<p className="font-text2">-За сімейними обставинами </p>
+<p className="font-text2">-Наявністю інвалідності</p>
+<p className="font-text2">-Навчання у вищому закладі </p>
 </div>
-<p className="font-text-18px-regular textbeg">Ні для кого не секрет, що ТЦК та СП не завжди об&#39;єктивно оцінює законні підстави для надання відстрочки та намагається мобілізувати військовозобов&#39;язаного, навіть який подав заяву для отримання відстрочки.
+<p className="font-text4 textbeg">Ні для кого не секрет, що ТЦК та СП не завжди об&#39;єктивно оцінює законні підстави для надання відстрочки та намагається мобілізувати військовозобов&#39;язаного, навіть який подав заяву для отримання відстрочки.
 </p>
-<p className="font-text-18px-regular">Наша команда має досвід підходу до даного питання та його вирішення навіть у кризових ситуаціях.</p>
+<p className="font-text4">Наша команда має досвід підходу до даного питання та його вирішення навіть у кризових ситуаціях.</p>
 <OpenMenuButton></OpenMenuButton>
 </div>
 <Image

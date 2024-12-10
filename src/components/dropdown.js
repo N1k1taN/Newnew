@@ -96,19 +96,19 @@ const Dropdown = () => {
             style={{ overflowY: 'auto', maxHeight: window.innerHeight < 450 ? '300px' : 'none' }}
           >
             <li className="dad">
-              <a href="/#help" className="linked font-menu-menu" onClick={(e) => { handleSmoothScroll(e, '/#help'); }}>Послуги</a>
+              <a href="/#help" className="linked font-menulink" onClick={(e) => { handleSmoothScroll(e, '/#help'); }}>Послуги</a>
             </li>
             <li className="dad">
-              <a href="/#vidguk" className="linked font-menu-menu" onClick={(e) => { handleSmoothScroll(e, '/#vidguk'); }}>Відгуки</a>
+              <a href="/#vidguk" className="linked font-menulink" onClick={(e) => { handleSmoothScroll(e, '/#vidguk'); }}>Відгуки</a>
             </li>
             <li className="dad">
-              <Link href="/onas" className="linked font-menu-menu" onClick={toggleDropdown}>Про нас</Link>
+              <Link href="/onas" className="linked font-menulink" onClick={toggleDropdown}>Про нас</Link>
             </li>
             <li className="dad">
-              <a href="/#case" className="linked font-menu-menu" onClick={(e) => { handleSmoothScroll(e, '/#case'); }}>Кейси</a>
+              <a href="/#case" className="linked font-menulink" onClick={(e) => { handleSmoothScroll(e, '/#case'); }}>Кейси</a>
             </li>
             <li className="dad">
-              <a href="/#contate" className="linked font-menu-menu" onClick={(e) => { handleSmoothScroll(e, '/#contate'); }}>Контакти</a>
+              <a href="/#contate" className="linked font-menulink" onClick={(e) => { handleSmoothScroll(e, '/#contate'); }}>Контакти</a>
             </li>
             <li className="dad">
               <a className="phonebutton font-menu-tel" href="tel:+380937452557">+380937452557</a>
@@ -124,7 +124,6 @@ const Dropdown = () => {
       e.preventDefault();
       window.location.href = "intent://chat?number=%2B380937452557#Intent;scheme=viber;package=com.viber.voip;end";
     } else if (userAgent.includes('ios')) {
-      window.location.href = "https://apps.apple.com/app/id382617920";
     } else {
       window.location.href = "https://www.viber.com/";
     }

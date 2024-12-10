@@ -22,7 +22,7 @@ const PanelRech = () => {
     >
       <div className="textbys">
         <div className="ACDS">
-          <h3 className='font-citat'>“Кожен наш клієнт для нас є побратимом 
+          <h3 className='font-quote'>“Кожен наш клієнт для нас є побратимом 
 на юридичному фронті, за якого ми будемо 
 битись до кінця використовуючи всі можливі методи правової боротьби.“</h3>
 
@@ -30,7 +30,7 @@ const PanelRech = () => {
       </div>
 
       <div className="Ownerb"></div>
-      <div className='ownername font-h3'>
+      <div className='ownername font-text2'>
                   <p>Ярослав Науменко</p>
           <p>Засновник NLAW Company</p>
       </div>
