@@ -47,7 +47,7 @@ function ConsultationForm() {
   };
 
   return (
-    <section className="consultation-form">
+    <section className="consultation-form" id="contate">
       <h2 className="font-h3">ЗАПИС НА КОНСУЛЬТАЦІЮ</h2>
       <h3 className="font-h6">
         ЗАПОВНІТЬ ФОРМУ І МИ ЗВ'ЯЖЕМОСЬ З ВАМИ НАЙБЛИЖЧИМ ЧАСОМ АБО ЗВ'ЯЖІТЬСЯ З НАМИ ЧЕРЕЗ ЗРУЧНИЙ ДЛЯ ВАС

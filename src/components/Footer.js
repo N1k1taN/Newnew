@@ -32,7 +32,7 @@ return<div className="footer">
   </div>
 </div> */}
 </div>
-<div className="footer-end" id="contate">
+<div className="footer-end">
   <h3 className="font-TOV">© 2024 NLAW Company | Усі права захищено.   Код ЄДРПОУ:45432286 ТОВ «НАУМЕНКО ЮК»</h3>
 </div>
 </div>
