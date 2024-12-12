@@ -19,8 +19,7 @@ return<div className="footer">
 </div>
 <div className="address">
   <h2 className="font-foz">Адреса</h2>
-  <h3 className="font-foinfo">м. Київ, вул. Білоруська 30 
-  (10 хвилин пішки від метро Лукʼянівська)</h3>
+  <h3 className="font-foinfo">м. Київ, вул. Білоруська 30 </h3>
 </div>
 {/* <div className="footer-socials">
   <h2 className="font-h2">Follow us</h2>

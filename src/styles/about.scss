@@ -164,6 +164,167 @@ padding: 20px;
 #dykg>h3{
     padding-top: 0px;
 }
+.allos>h1{
+    text-align: center !important;
+}
+.Nlawcomp{
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.Nlawcomp>p{
+    padding-top: 20px;
+}
+
+.nasnas{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: start;
+    padding-bottom: 20px;
+}
+.textnas{
+    width: 60%;
+    height: 300%;
+}
+.citata-mob{
+    display: none;
+}
+.enbmob{
+    display: none;
+}
+.p-text{
+    width: 80%;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+.textnas>p{
+    padding: 20px;
+    padding-left: 0px;
+}
+.textnas>p:first-child{
+    padding-top: 0px;
+}
+.allos>.Messenger-block{
+    background: none;
+    color: $black-text;
+}
+.allos>.Messenger-block>h2{
+    color: $black-text;
+}
+
+.photonasnas{
+    background-image: url("/icons/onasphoto.png");
+    width: 436px;
+    height: 477px;
+    background-repeat: no-repeat;
+object-fit: contain;
+background-position: center;
+}
+.citata-onas{
+    padding: 20px;
+    width: 770px;
+    background-color: white;
+    box-shadow: -4px 4px 4px 0px rgba(34, 34, 34, 0.25);
+    position: relative;
+    top: 63%;
+    right: 155%;
+
+}
+.named{
+    position: relative;
+    right: 103%;
+    top: 67%;
+}
+.named>p{
+    text-align: end !important;
+}
+.named-mob{
+    display: none;
+}
+.textnas-mob{
+    display: none;
+}
+
+@media (max-width:1430px) {
+.enbmob{
+    display: block;
+}
+.dismob{
+    display: none;
+}
+.citata-onas{
+    padding: 20px;
+    width: 560px;
+    background-color: white;
+    right: 113%;
+
+}
+.Nlawcomp{
+    width: 95%;
+}
+.nasnas{
+    width: 95%;
+    justify-content: space-between;
+
+}
+.photonasnas{
+    width: 325px;
+    height: 413px;
+    background-size: cover;
+}
+
+
+}
+@media (max-width:730px){
+.textnas{
+    display: none;
+}
+.citata-onas{
+    display: none;
+}
+.named{
+    display: none;
+}
+.p-text{
+    width: 95%;
+}
+.citata-mob{
+    display: block;
+    box-shadow: -4px 4px 4px 0px rgba(34, 34, 34, 0.25);
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.nasnas{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.named-mob{
+    display: block;
+}
+.named-mob>p{
+    text-align: center;
+}
+.named-mob>p:first-child{
+    padding-top: 20px;
+}
+.named-mob>p:last-child{
+    padding-bottom: 20px;
+}
+.photonasnas{
+    width: 275px;
+    height: 330px;
+}
+.textnas-mob{
+    display: block;
+}
+}
+
 
 
 @media (max-width:560px) {

@@ -72,7 +72,7 @@ const Dropdown = () => {
       } else {
         router.push(href);
       }
-    }, 10);
+    }, 50);
   };
 
   if (!isMobile) {
