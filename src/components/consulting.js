@@ -7,7 +7,6 @@ function ConsultationForm() {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [phoneError, setPhoneError] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
-  const [userName, setUserName] = useState(''); // State для имени пользователя
 
   const form = useRef();
 
@@ -24,8 +23,8 @@ function ConsultationForm() {
     setPhoneError(false);
 
     emailjs
-      .sendForm('service_6y4cf6d', 'template_z5dngfy', form.current, 'Oa2baTXpg0UruiePo')
-      .then(
+    .sendForm('service_6y4cf6d', 'template_j9ce8db', form.current, 'Oa2baTXpg0UruiePo')
+    .then(
         () => {
           setFormSubmitted(true);
         },
@@ -36,7 +35,6 @@ function ConsultationForm() {
 
     e.target.reset();
     setPhoneNumber('');
-    setUserName('');
   };
 
   const handlePhoneNumberChange = (e) => {
@@ -61,18 +59,6 @@ function ConsultationForm() {
           </div>
         ) : (
           <form ref={form} onSubmit={sendEmail} className="form-content">
-            <div className="form-group">
-              <input
-                type="text"
-                value={userName}
-                onChange={(e) => setUserName(e.target.value)}
-                name="from_name"
-                id="user-name"
-                placeholder="Ваше ім'я"
-                required
-                className="name-input font-input"
-              />
-            </div>
             <div className="form-group">
             <div className="placeholder-wrap">
               <input

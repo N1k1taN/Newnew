@@ -239,6 +239,10 @@ background-position: center;
     right: 103%;
     top: 67%;
 }
+.p-text{
+    padding-top: 30px;
+    text-align: left;
+}
 .named>p{
     text-align: end !important;
 }
@@ -247,6 +251,12 @@ background-position: center;
 }
 .textnas-mob{
     display: none;
+}
+.textnas-mob>p:last-child{
+    padding-top: 20px;
+}
+.big-let{
+    font-size: 23px !important;
 }
 
 @media (max-width:1430px) {
