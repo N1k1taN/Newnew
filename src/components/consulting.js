@@ -48,9 +48,9 @@ function ConsultationForm() {
     <section className="consultation-form" id="contate">
       <h2 className="font-h3">ЗАПИС НА КОНСУЛЬТАЦІЮ</h2>
       <h3 className="font-h6">
-        ЗАПОВНІТЬ ФОРМУ І МИ ЗВ'ЯЖЕМОСЬ З ВАМИ НАЙБЛИЖЧИМ ЧАСОМ АБО ЗВ'ЯЖІТЬСЯ З НАМИ ЧЕРЕЗ ЗРУЧНИЙ ДЛЯ ВАС
-        МЕССЕНДЖЕР
+        ЗАПОВНІТЬ ФОРМУ І МИ ЗВ'ЯЖЕМОСЬ З ВАМИ НАЙБЛИЖЧИМ ЧАСОМ 
       </h3>
+      <h3 className='font-h6 mobile-disable'>АБО ЗВ'ЯЖІТЬСЯ З НАМИ ЧЕРЕЗ ЗРУЧНИЙ ДЛЯ ВАС МЕССЕНДЖЕР</h3>
       <div className="form-container">
         {formSubmitted ? (
           <div className="thank-you-message">
@@ -86,6 +86,7 @@ function ConsultationForm() {
             </button>
           </form>
         )}
+              <h3 className='font-h6 mobile-enable soso'>АБО ЗВ'ЯЖІТЬСЯ З НАМИ ЧЕРЕЗ ЗРУЧНИЙ ДЛЯ ВАС МЕССЕНДЖЕР</h3>
         <div className="messengers" id="Consul">
           <a
             href="viber://chat?number=%2B380937452557"

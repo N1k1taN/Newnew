@@ -55,8 +55,10 @@ function Homepage() {
       <div className="mainpage" id="home">
         <div className="info">
           <h1 className='font-h1'>ВІЙСЬКОВИЙ АДВОКАТ</h1>
-          <h2 className='font-h2'>ОДНІ З НАЙКРАЩИХ У ВИРІШЕННІ ЮРИДИЧНИХ ПИТАНЬ З ВІЙСЬКОВОГО ПРАВА</h2>
-          <h2 className='font-h2'>ПРАЦЮЄМО ПО ВСІЙ УКРАЇНІ</h2>
+          <h2 className='font-h2 mobile-enable'>НАЙКРАЩІ у ВИРІШЕННІ ЮРИДИЧНИХ ПИТАНЬ З ВІЙСЬКОВОГО ПРАВА</h2>
+          <h2 className='font-h2 mobile-disable'>ОДНІ З НАЙКРАЩИХ У ВИРІШЕННІ ЮРИДИЧНИХ ПИТАНЬ З ВІЙСЬКОВОГО ПРАВА</h2>
+          <h2 className='font-foinfo mobile-enable'>ЗАХИЩАЄМО ВАШІ ПРАВА ПО ВСІЙ УКРАЇНІ</h2>
+          <h2 className='font-h2 mobile-disable'>ПРАЦЮЄМО ПО ВСІЙ УКРАЇНІ</h2>
           <OpenMenuButton />
         </div>
 
